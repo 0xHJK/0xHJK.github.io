@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://hjk.im/p/pyquery-install.html</loc>
+    <lastmod>2016-08-05T02:46:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu下PyQuery安装失败、lxml安装失败</title>
+        <pubTime>2016-08-05T02:12:56.000Z</pubTime>
+        
+        <tag>Python3</tag>
+         
+        <tag>PyQuery</tag>
+         
+        <tag>lxml</tag>
+         
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hjk.im/p/hello.html</loc>
+    <lastmod>2016-07-30T16:49:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello</title>
+        <pubTime>2016-07-30T13:22:22.000Z</pubTime>
+        
+        <tag>HJK.im</tag>
+         
+        <tag>Hexo</tag>
+         
+        <tag>NexT</tag>
+         
+        <tag>GitHub</tag>
+         
+        <tag>Coding</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>

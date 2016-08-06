@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://hjk.im/p/qcloud-openvpn.html</loc>
+    <lastmod>2016-08-06T14:52:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu一键安装openvpn和免流的一点人生经验</title>
+        <pubTime>2016-08-06T12:13:30.000Z</pubTime>
+        
+        <tag>腾讯云</tag>
+         
+        <tag>openvpn</tag>
+         
+        <tag>免流</tag>
+         
+        <tag>tinyproxy</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/pyquery-install.html</loc>
     <lastmod>2016-08-05T02:46:10.000Z</lastmod>
     <data>

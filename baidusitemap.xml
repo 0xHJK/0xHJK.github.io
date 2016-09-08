@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://hjk.im/p/360cdn-closed.html</loc>
+    <lastmod>2016-09-08T15:21:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>360前端公共库已经停止运行</title>
+        <pubTime>2016-09-08T15:09:06.000Z</pubTime>
+        
+        <tag>360</tag>
+         
+        <tag>CDN</tag>
+         
+        <tag>fonts</tag>
+         
+         
+           
+             
+              <breadCrumb title="资讯" url="http://hjk.im/categories/%E8%B5%84%E8%AE%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/console-api-reference.html</loc>
     <lastmod>2016-08-26T11:35:46.000Z</lastmod>
     <data>
@@ -63,9 +87,9 @@
         <title>Docker for Mac找不到docker0</title>
         <pubTime>2016-08-10T11:56:59.000Z</pubTime>
         
-        <tag>docker</tag>
-         
         <tag>mac</tag>
+         
+        <tag>docker</tag>
          
         <tag>docker0</tag>
          

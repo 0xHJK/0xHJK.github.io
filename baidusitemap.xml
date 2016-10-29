@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://hjk.im/p/mac-virtualbox-ssh-nat.html</loc>
+    <lastmod>2016-10-29T08:31:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>在macOS下使用NAT连接virtualbox中的Ubuntu</title>
+        <pubTime>2016-10-29T08:14:50.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+        <tag>virtualbox</tag>
+         
+        <tag>Ubuntu</tag>
+         
+        <tag>NAT</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/360cdn-closed.html</loc>
     <lastmod>2016-09-08T15:21:36.000Z</lastmod>
     <data>
@@ -137,13 +163,13 @@
         <title>Ubuntu下PyQuery安装失败、lxml安装失败</title>
         <pubTime>2016-08-05T02:12:56.000Z</pubTime>
         
+        <tag>Ubuntu</tag>
+         
         <tag>Python3</tag>
          
         <tag>PyQuery</tag>
          
         <tag>lxml</tag>
-         
-        <tag>Ubuntu</tag>
          
          
            

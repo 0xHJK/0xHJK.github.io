@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HJK, Blog, Python, 前端, 安全, 互联网" />
+  <meta name="keywords" content="mac,virtualbox,Ubuntu,NAT," />
 
 
 
@@ -84,15 +84,31 @@
 
 
 
-<meta name="description" content="我真是一个幸运的家伙。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HJK's">
-<meta property="og:url" content="http://hjk.im/tags/免流/index.html">
+<meta name="description" content="第一步要确认一下Ubuntu里面有没有安装ssh-server，可以用sshd测试。如果没有安装的话，可以使用sudo apt-get install openssh-server安装。
+然后是设置端口转发(Port Forwarding)：
+
+然后就可以在mac下连接了：
+ssh username@127.0.0.1 -p 2222">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在macOS下使用NAT连接virtualbox中的Ubuntu">
+<meta property="og:url" content="http://hjk.im/p/mac-virtualbox-ssh-nat.html">
 <meta property="og:site_name" content="HJK's">
-<meta property="og:description" content="我真是一个幸运的家伙。">
+<meta property="og:description" content="第一步要确认一下Ubuntu里面有没有安装ssh-server，可以用sshd测试。如果没有安装的话，可以使用sudo apt-get install openssh-server安装。
+然后是设置端口转发(Port Forwarding)：
+
+然后就可以在mac下连接了：
+ssh username@127.0.0.1 -p 2222">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0060lm7Tgw1f997wvjv4nj310e0qm79f.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tgw1f997wuwbnqj30zk0icq4z.jpg">
+<meta property="og:updated_time" content="2016-10-29T08:31:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HJK's">
-<meta name="twitter:description" content="我真是一个幸运的家伙。">
+<meta name="twitter:title" content="在macOS下使用NAT连接virtualbox中的Ubuntu">
+<meta name="twitter:description" content="第一步要确认一下Ubuntu里面有没有安装ssh-server，可以用sshd测试。如果没有安装的话，可以使用sudo apt-get install openssh-server安装。
+然后是设置端口转发(Port Forwarding)：
+
+然后就可以在mac下连接了：
+ssh username@127.0.0.1 -p 2222">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/0060lm7Tgw1f997wvjv4nj310e0qm79f.jpg">
 
 
 
@@ -113,9 +129,9 @@
 
 
 
-  <link rel="canonical" href="http://hjk.im/tags/免流/"/>
+  <link rel="canonical" href="http://hjk.im/p/mac-virtualbox-ssh-nat.html"/>
 
-  <title> 标签: 免流 | HJK's </title>
+  <title> 在macOS下使用NAT连接virtualbox中的Ubuntu | HJK's </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,7 +152,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,46 +240,172 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        免流
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                在macOS下使用NAT连接virtualbox中的Ubuntu
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-29T16:14:50+08:00" content="2016-10-29">
+              2016-10-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/日常/" itemprop="url" rel="index">
+                    <span itemprop="name">日常</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/p/mac-virtualbox-ssh-nat.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="p/mac-virtualbox-ssh-nat.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/p/mac-virtualbox-ssh-nat.html" class="leancloud_visitors" data-flag-title="在macOS下使用NAT连接virtualbox中的Ubuntu">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>第一步要确认一下Ubuntu里面有没有安装ssh-server，可以用<code>sshd</code>测试。<br>如果没有安装的话，可以使用<code>sudo apt-get install openssh-server</code>安装。</p>
+<p>然后是设置端口转发(Port Forwarding)：</p>
+<p><img src="http://ww1.sinaimg.cn/large/0060lm7Tgw1f997wvjv4nj310e0qm79f.jpg" alt=""><br><img src="http://ww2.sinaimg.cn/large/0060lm7Tgw1f997wuwbnqj30zk0icq4z.jpg" alt=""></p>
+<p>然后就可以在mac下连接了：</p>
+<p>ssh username@127.0.0.1 -p 2222</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/p/qcloud-openvpn.html" itemprop="url">
-              
-                <span itemprop="name">Ubuntu一键安装openvpn和免流的一点人生经验</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-06T20:13:30+08:00"
-              content="2016-08-06" >
-          08-06
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mac/" rel="tag">#mac</a>
+          
+            <a href="/tags/virtualbox/" rel="tag">#virtualbox</a>
+          
+            <a href="/tags/Ubuntu/" rel="tag">#Ubuntu</a>
+          
+            <a href="/tags/NAT/" rel="tag">#NAT</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/p/360cdn-closed.html" rel="next" title="360前端公共库已经停止运行">
+                <i class="fa fa-chevron-left"></i> 360前端公共库已经停止运行
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -271,6 +413,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="p/mac-virtualbox-ssh-nat.html"
+           data-title="在macOS下使用NAT连接virtualbox中的Ubuntu" data-url="http://hjk.im/p/mac-virtualbox-ssh-nat.html">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -290,8 +440,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://cdn.hjk.im/avatar/201607.jpg?imageView2/2/w/200"
@@ -411,6 +570,17 @@
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -529,6 +699,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

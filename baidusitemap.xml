@@ -4,6 +4,36 @@
 
     
   <url>
+    <loc>http://hjk.im/p/get-free-domain.html</loc>
+    <lastmod>2016-11-08T12:18:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>注册ml/ga/cf/tk免费域名并设置dns解析</title>
+        <pubTime>2016-11-08T08:06:35.000Z</pubTime>
+        
+        <tag>free</tag>
+         
+        <tag>domain</tag>
+         
+        <tag>dns</tag>
+         
+        <tag>freenom</tag>
+         
+        <tag>dnspod</tag>
+         
+        <tag>cloudxns</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/mac-virtualbox-ssh-nat.html</loc>
     <lastmod>2016-10-29T08:31:32.000Z</lastmod>
     <data>
@@ -13,9 +43,9 @@
         
         <tag>mac</tag>
          
-        <tag>Ubuntu</tag>
-         
         <tag>virtualbox</tag>
+         
+        <tag>Ubuntu</tag>
          
         <tag>NAT</tag>
          
@@ -113,9 +143,9 @@
         <title>Docker for Mac找不到docker0</title>
         <pubTime>2016-08-10T11:56:59.000Z</pubTime>
         
-        <tag>docker</tag>
-         
         <tag>mac</tag>
+         
+        <tag>docker</tag>
          
         <tag>docker0</tag>
          
@@ -163,13 +193,13 @@
         <title>Ubuntu下PyQuery安装失败、lxml安装失败</title>
         <pubTime>2016-08-05T02:12:56.000Z</pubTime>
         
+        <tag>Ubuntu</tag>
+         
         <tag>Python3</tag>
          
         <tag>PyQuery</tag>
          
         <tag>lxml</tag>
-         
-        <tag>Ubuntu</tag>
          
          
            

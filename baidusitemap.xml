@@ -43,9 +43,9 @@
         
         <tag>mac</tag>
          
-        <tag>virtualbox</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>virtualbox</tag>
          
         <tag>NAT</tag>
          
@@ -193,13 +193,13 @@
         <title>Ubuntu下PyQuery安装失败、lxml安装失败</title>
         <pubTime>2016-08-05T02:12:56.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Python3</tag>
          
         <tag>PyQuery</tag>
          
         <tag>lxml</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            

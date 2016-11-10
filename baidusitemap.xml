@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://hjk.im/p/fix-hexo-theme-next-blank.html</loc>
+    <lastmod>2016-11-10T14:49:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>修复使用NexT主题的Hexo博客显示空白问题</title>
+        <pubTime>2016-11-10T14:36:54.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>NexT</tag>
+         
+        <tag>GitHub</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/get-free-domain.html</loc>
     <lastmod>2016-11-08T12:18:43.000Z</lastmod>
     <data>
@@ -143,9 +167,9 @@
         <title>Docker for Mac找不到docker0</title>
         <pubTime>2016-08-10T11:56:59.000Z</pubTime>
         
-        <tag>mac</tag>
-         
         <tag>docker</tag>
+         
+        <tag>mac</tag>
          
         <tag>docker0</tag>
          
@@ -219,13 +243,13 @@
         <title>Hello</title>
         <pubTime>2016-07-30T13:22:22.000Z</pubTime>
         
-        <tag>HJK.im</tag>
-         
         <tag>Hexo</tag>
          
         <tag>NexT</tag>
          
         <tag>GitHub</tag>
+         
+        <tag>HJK.im</tag>
          
         <tag>Coding</tag>
          

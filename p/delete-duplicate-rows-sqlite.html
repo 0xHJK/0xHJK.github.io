@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HJK, Blog, Python, 前端, 安全, 互联网" />
+  <meta name="keywords" content="sqlite,SQL," />
 
 
 
@@ -84,15 +84,28 @@
 
 
 
-<meta name="description" content="我真是一个幸运的家伙。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HJK's">
-<meta property="og:url" content="http://hjk.im/tags/GitHub/index.html">
+<meta name="description" content="查询Table中id字段重复的行：
+1select * from Table group by id having count(*)&amp;gt;1;
+删除Table中id字段重复的行：
+1delete from Table where Table.rowid not in (select max(Table.rowid) from Table group by id);
+关于group by可以参考这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="删除sqlite中的重复数据">
+<meta property="og:url" content="http://hjk.im/p/delete-duplicate-rows-sqlite.html">
 <meta property="og:site_name" content="HJK's">
-<meta property="og:description" content="我真是一个幸运的家伙。">
+<meta property="og:description" content="查询Table中id字段重复的行：
+1select * from Table group by id having count(*)&amp;gt;1;
+删除Table中id字段重复的行：
+1delete from Table where Table.rowid not in (select max(Table.rowid) from Table group by id);
+关于group by可以参考这">
+<meta property="og:updated_time" content="2016-11-16T13:31:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HJK's">
-<meta name="twitter:description" content="我真是一个幸运的家伙。">
+<meta name="twitter:title" content="删除sqlite中的重复数据">
+<meta name="twitter:description" content="查询Table中id字段重复的行：
+1select * from Table group by id having count(*)&amp;gt;1;
+删除Table中id字段重复的行：
+1delete from Table where Table.rowid not in (select max(Table.rowid) from Table group by id);
+关于group by可以参考这">
 
 
 
@@ -113,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://hjk.im/tags/GitHub/"/>
+  <link rel="canonical" href="http://hjk.im/p/delete-duplicate-rows-sqlite.html"/>
 
-  <title> 标签: GitHub | HJK's </title>
+  <title> 删除sqlite中的重复数据 | HJK's </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,7 +149,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,74 +237,169 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        GitHub
-        <small>标签</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/p/fix-hexo-theme-next-blank.html" itemprop="url">
-              
-                <span itemprop="name">修复使用NexT主题的Hexo博客显示空白问题</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-10T22:36:54+08:00"
-              content="2016-11-10" >
-          11-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/p/hello.html" itemprop="url">
-              
-                <span itemprop="name">Hello</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-30T21:22:22+08:00"
-              content="2016-07-30" >
-          07-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                删除sqlite中的重复数据
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-16T21:19:44+08:00" content="2016-11-16">
+              2016-11-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/日常/" itemprop="url" rel="index">
+                    <span itemprop="name">日常</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/p/delete-duplicate-rows-sqlite.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="p/delete-duplicate-rows-sqlite.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/p/delete-duplicate-rows-sqlite.html" class="leancloud_visitors" data-flag-title="删除sqlite中的重复数据">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>查询Table中id字段重复的行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select * from Table group by id having count(*)&gt;1;</div></pre></td></tr></table></figure>
+<p>删除Table中id字段重复的行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">delete from Table where Table.rowid not in (select max(Table.rowid) from Table group by id);</div></pre></td></tr></table></figure>
+<p>关于group by可以参考这里：<a href="http://www.runoob.com/sqlite/sqlite-group-by.html" target="_blank" rel="external">http://www.runoob.com/sqlite/sqlite-group-by.html</a></p>
+<p>关于rowid可以参考这里<a href="http://sqlite.org/lang_createtable.html#rowid" target="_blank" rel="external">http://sqlite.org/lang_createtable.html#rowid</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/sqlite/" rel="tag">#sqlite</a>
+          
+            <a href="/tags/SQL/" rel="tag">#SQL</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/p/fix-hexo-theme-next-blank.html" rel="next" title="修复使用NexT主题的Hexo博客显示空白问题">
+                <i class="fa fa-chevron-left"></i> 修复使用NexT主题的Hexo博客显示空白问题
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -299,6 +407,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="p/delete-duplicate-rows-sqlite.html"
+           data-title="删除sqlite中的重复数据" data-url="http://hjk.im/p/delete-duplicate-rows-sqlite.html">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -318,8 +434,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://cdn.hjk.im/avatar/201607.jpg?imageView2/2/w/200"
@@ -439,6 +564,17 @@
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -557,6 +693,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

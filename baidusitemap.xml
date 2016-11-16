@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://hjk.im/p/delete-duplicate-rows-sqlite.html</loc>
+    <lastmod>2016-11-16T13:31:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>删除sqlite中的重复数据</title>
+        <pubTime>2016-11-16T13:19:44.000Z</pubTime>
+        
+        <tag>sqlite</tag>
+         
+        <tag>SQL</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/fix-hexo-theme-next-blank.html</loc>
     <lastmod>2016-11-10T14:49:19.000Z</lastmod>
     <data>
@@ -167,9 +189,9 @@
         <title>Docker for Mac找不到docker0</title>
         <pubTime>2016-08-10T11:56:59.000Z</pubTime>
         
-        <tag>docker</tag>
-         
         <tag>mac</tag>
+         
+        <tag>docker</tag>
          
         <tag>docker0</tag>
          

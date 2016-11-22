@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HJK, Blog, Python, 前端, 安全, 互联网" />
+  <meta name="keywords" content="shell,linux,macOS," />
 
 
 
@@ -84,15 +84,28 @@
 
 
 
-<meta name="description" content="我真是一个幸运的家伙。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HJK's">
-<meta property="og:url" content="http://hjk.im/tags/网卡/index.html">
+<meta name="description" content="直接上代码：
+1ls | while read l1; do mv $l1 `echo $l1 | tr &amp;apos;[A-Z]&amp;apos; &amp;apos;[a-z]&amp;apos;`; done;
+利用了UNIX的管道设计，意思是列出所有文件，然后执行循环，循环里面将每个文件名转换成小写。
+如果需要转换指定文件，比如jpg图片，那也可以这样写：
+1ls *.jpg | while read l1; d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shell一句话批量转换文件名大小写">
+<meta property="og:url" content="http://hjk.im/p/batch-rename-filenames-with-shell.html">
 <meta property="og:site_name" content="HJK's">
-<meta property="og:description" content="我真是一个幸运的家伙。">
+<meta property="og:description" content="直接上代码：
+1ls | while read l1; do mv $l1 `echo $l1 | tr &amp;apos;[A-Z]&amp;apos; &amp;apos;[a-z]&amp;apos;`; done;
+利用了UNIX的管道设计，意思是列出所有文件，然后执行循环，循环里面将每个文件名转换成小写。
+如果需要转换指定文件，比如jpg图片，那也可以这样写：
+1ls *.jpg | while read l1; d">
+<meta property="og:updated_time" content="2016-11-22T10:35:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HJK's">
-<meta name="twitter:description" content="我真是一个幸运的家伙。">
+<meta name="twitter:title" content="Shell一句话批量转换文件名大小写">
+<meta name="twitter:description" content="直接上代码：
+1ls | while read l1; do mv $l1 `echo $l1 | tr &amp;apos;[A-Z]&amp;apos; &amp;apos;[a-z]&amp;apos;`; done;
+利用了UNIX的管道设计，意思是列出所有文件，然后执行循环，循环里面将每个文件名转换成小写。
+如果需要转换指定文件，比如jpg图片，那也可以这样写：
+1ls *.jpg | while read l1; d">
 
 
 
@@ -113,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://hjk.im/tags/网卡/"/>
+  <link rel="canonical" href="http://hjk.im/p/batch-rename-filenames-with-shell.html"/>
 
-  <title> 标签: 网卡 | HJK's </title>
+  <title> Shell一句话批量转换文件名大小写 | HJK's </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,7 +149,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,46 +237,174 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        网卡
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Shell一句话批量转换文件名大小写
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-22T18:17:38+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/shell/" itemprop="url" rel="index">
+                    <span itemprop="name">shell</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/p/batch-rename-filenames-with-shell.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="p/batch-rename-filenames-with-shell.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/p/batch-rename-filenames-with-shell.html" class="leancloud_visitors" data-flag-title="Shell一句话批量转换文件名大小写">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p>直接上代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls | while read l1; do mv $l1 `echo $l1 | tr &apos;[A-Z]&apos; &apos;[a-z]&apos;`; done;</div></pre></td></tr></table></figure>
+<p>利用了UNIX的管道设计，意思是列出所有文件，然后执行循环，循环里面将每个文件名转换成小写。</p>
+<p>如果需要转换指定文件，比如jpg图片，那也可以这样写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls *.jpg | while read l1; do mv $l1 `echo $l1 | tr &apos;[A-Z]&apos; &apos;[a-z]&apos;`; done;</div></pre></td></tr></table></figure>
+<p>如果是把小写转换成大写，那就是这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls | while read l1; do mv $l1 `echo $l1 | tr &apos;[a-z]&apos; &apos;[A-Z]&apos;`; done;</div></pre></td></tr></table></figure>
+<p>其他的可以自行发挥。另外注意操作是不可逆的，记得备份。</p>
+<p>最近在读《UNIX编程艺术》，一边也开始系统性地学习Shell。深深地被UNIX设计理念和Shell的强大所折服，所以新设了一个分类，用来记录一些Shell的tips。</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/p/qf9700-for-mac.html" itemprop="url">
-              
-                <span itemprop="name">USB有线网卡ky-qf9700的Mac版(10.11)驱动</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-23T19:15:05+08:00"
-              content="2016-08-23" >
-          08-23
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/shell/" rel="tag">#shell</a>
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+            <a href="/tags/macOS/" rel="tag">#macOS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/p/delete-duplicate-rows-sqlite.html" rel="next" title="删除sqlite中的重复数据">
+                <i class="fa fa-chevron-left"></i> 删除sqlite中的重复数据
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -271,6 +412,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="p/batch-rename-filenames-with-shell.html"
+           data-title="Shell一句话批量转换文件名大小写" data-url="http://hjk.im/p/batch-rename-filenames-with-shell.html">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -290,8 +439,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://cdn.hjk.im/avatar/201607.jpg?imageView2/2/w/200"
@@ -411,6 +569,17 @@
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -529,6 +698,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://hjk.im/p/batch-rename-filenames-with-shell.html</loc>
+    <lastmod>2016-11-22T10:35:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>Shell一句话批量转换文件名大小写</title>
+        <pubTime>2016-11-22T10:17:38.000Z</pubTime>
+        
+        <tag>shell</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>macOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="shell" url="http://hjk.im/categories/shell/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/delete-duplicate-rows-sqlite.html</loc>
     <lastmod>2016-11-16T13:31:25.000Z</lastmod>
     <data>
@@ -189,9 +213,9 @@
         <title>Docker for Mac找不到docker0</title>
         <pubTime>2016-08-10T11:56:59.000Z</pubTime>
         
-        <tag>mac</tag>
-         
         <tag>docker</tag>
+         
+        <tag>mac</tag>
          
         <tag>docker0</tag>
          

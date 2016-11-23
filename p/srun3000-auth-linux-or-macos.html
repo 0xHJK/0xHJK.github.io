@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Ubuntu,Python3,PyQuery,lxml," />
+  <meta name="keywords" content="srun,bash,curl,awk,md5," />
 
 
 
@@ -84,25 +84,34 @@
 
 
 
-<meta name="description" content="一般来说，安装PyQuery失败的主要原因是安装lxml失败。
-首先需要安装依赖库：1$ sudo apt-get install libxml2-dev libxslt-dev python-dev
-再次尝试安装：1$ sudo pip3 install pyquery
-再次提示错误：123/usr/bin/ld: cannot find -lzcollect2: error: ld retur">
+<meta name="description" content="实现了从命令行输入参数，从变量读取参数，从文本读取参数，三种模式。支持登录，注销，记录登录信息等功能。主要用到了curl、md5和awk，支持Linux和macOS。
+Github地址：https://github.com/0xHJK/srunauth
+参数说明
+-q 安静模式，不输出中间信息（默认全部输出）
+-u 用户名
+-p 密码
+Commond 命令登录或者登出，login（默认）或 log">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu下PyQuery安装失败、lxml安装失败">
-<meta property="og:url" content="http://hjk.im/p/pyquery-install.html">
+<meta property="og:title" content="srun系统上网认证（适用Linux和macOS）">
+<meta property="og:url" content="http://hjk.im/p/srun3000-auth-linux-or-macos.html">
 <meta property="og:site_name" content="HJK's">
-<meta property="og:description" content="一般来说，安装PyQuery失败的主要原因是安装lxml失败。
-首先需要安装依赖库：1$ sudo apt-get install libxml2-dev libxslt-dev python-dev
-再次尝试安装：1$ sudo pip3 install pyquery
-再次提示错误：123/usr/bin/ld: cannot find -lzcollect2: error: ld retur">
-<meta property="og:updated_time" content="2016-08-05T02:46:10.000Z">
+<meta property="og:description" content="实现了从命令行输入参数，从变量读取参数，从文本读取参数，三种模式。支持登录，注销，记录登录信息等功能。主要用到了curl、md5和awk，支持Linux和macOS。
+Github地址：https://github.com/0xHJK/srunauth
+参数说明
+-q 安静模式，不输出中间信息（默认全部输出）
+-u 用户名
+-p 密码
+Commond 命令登录或者登出，login（默认）或 log">
+<meta property="og:updated_time" content="2016-11-23T13:05:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu下PyQuery安装失败、lxml安装失败">
-<meta name="twitter:description" content="一般来说，安装PyQuery失败的主要原因是安装lxml失败。
-首先需要安装依赖库：1$ sudo apt-get install libxml2-dev libxslt-dev python-dev
-再次尝试安装：1$ sudo pip3 install pyquery
-再次提示错误：123/usr/bin/ld: cannot find -lzcollect2: error: ld retur">
+<meta name="twitter:title" content="srun系统上网认证（适用Linux和macOS）">
+<meta name="twitter:description" content="实现了从命令行输入参数，从变量读取参数，从文本读取参数，三种模式。支持登录，注销，记录登录信息等功能。主要用到了curl、md5和awk，支持Linux和macOS。
+Github地址：https://github.com/0xHJK/srunauth
+参数说明
+-q 安静模式，不输出中间信息（默认全部输出）
+-u 用户名
+-p 密码
+Commond 命令登录或者登出，login（默认）或 log">
 
 
 
@@ -123,9 +132,9 @@
 
 
 
-  <link rel="canonical" href="http://hjk.im/p/pyquery-install.html"/>
+  <link rel="canonical" href="http://hjk.im/p/srun3000-auth-linux-or-macos.html"/>
 
-  <title> Ubuntu下PyQuery安装失败、lxml安装失败 | HJK's </title>
+  <title> srun系统上网认证（适用Linux和macOS） | HJK's </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -255,7 +264,7 @@
             
             
               
-                Ubuntu下PyQuery安装失败、lxml安装失败
+                srun系统上网认证（适用Linux和macOS）
               
             
           </h1>
@@ -267,8 +276,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-05T10:12:56+08:00" content="2016-08-05">
-              2016-08-05
+            <time itemprop="dateCreated" datetime="2016-11-23T20:50:36+08:00" content="2016-11-23">
+              2016-11-23
             </time>
           </span>
 
@@ -281,8 +290,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/日常/" itemprop="url" rel="index">
-                    <span itemprop="name">日常</span>
+                  <a href="/categories/shell/" itemprop="url" rel="index">
+                    <span itemprop="name">shell</span>
                   </a>
                 </span>
 
@@ -297,8 +306,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/p/pyquery-install.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="p/pyquery-install.html" itemprop="commentsCount"></span>
+                <a href="/p/srun3000-auth-linux-or-macos.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="p/srun3000-auth-linux-or-macos.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -308,7 +317,7 @@
 
           
           
-             <span id="/p/pyquery-install.html" class="leancloud_visitors" data-flag-title="Ubuntu下PyQuery安装失败、lxml安装失败">
+             <span id="/p/srun3000-auth-linux-or-macos.html" class="leancloud_visitors" data-flag-title="srun系统上网认证（适用Linux和macOS）">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -335,15 +344,27 @@
       
 
       
-        <p>一般来说，安装PyQuery失败的主要原因是安装lxml失败。</p>
-<p>首先需要安装依赖库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install libxml2-dev libxslt-dev python-dev</div></pre></td></tr></table></figure></p>
-<p>再次尝试安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo pip3 install pyquery</div></pre></td></tr></table></figure></p>
-<p>再次提示错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/usr/bin/ld: cannot find -lz</div><div class="line">collect2: error: ld returned 1 exit status</div><div class="line">error: command &apos;x86_64-linux-gnu-gcc&apos; failed with exit status 1</div></pre></td></tr></table></figure></p>
-<p>继续安装依赖库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install zlib1g-dev</div></pre></td></tr></table></figure></p>
-<p>一般来说这样就安装成功了，如果还是失败，可能是由于内存太小（512M）导致无法完成编译，可以试试直接安装打包好的lxml：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install python3-lxml</div></pre></td></tr></table></figure></p>
-<p>如果是Python2.x：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install python-lxml</div></pre></td></tr></table></figure></p>
-<p>然后再继续安装PyQuery：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo pip3 install pyquery</div></pre></td></tr></table></figure></p>
-<p>如果提醒Permission denied，记得在命令前面加sudo。</p>
+        <p>实现了从命令行输入参数，从变量读取参数，从文本读取参数，三种模式。支持登录，注销，记录登录信息等功能。主要用到了curl、md5和awk，支持Linux和macOS。</p>
+<p>Github地址：<a href="https://github.com/0xHJK/srunauth" target="_blank" rel="external">https://github.com/0xHJK/srunauth</a></p>
+<h2 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h2><ul>
+<li>-q 安静模式，不输出中间信息（默认全部输出）</li>
+<li>-u 用户名</li>
+<li>-p 密码</li>
+<li>Commond 命令登录或者登出，login（默认）或 logout</li>
+</ul>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>一般使用方式：</p>
+<p>登录：<code>bash auth.sh -u [用户名] -p [密码]</code></p>
+<p>注销：<code>bash auth.sh -u [用户名] -p [密码] logout</code></p>
+<p>如果将账号密码写入脚本会更简单点：</p>
+<p>登录：<code>bash auth.sh</code></p>
+<p>注销：<code>bash auth.sh logout</code></p>
+<p>如果将脚本重命名为auth放入环境变量（如 <code>/usr/local/bin</code> 目录）会更简单点：</p>
+<p>登录：<code>auth</code></p>
+<p>注销：<code>auth logout</code></p>
+<p>如果<del>你有很多账号</del>，那么可以将账号密码写到文件中，程序会按行读取，直到成功登录，并记录状态信息。</p>
+<p><em>选择账号优先级为 命令行 &gt; 变量 &gt; 文件，当前者存在的时候，就不会尝试后者</em></p>
+<p>当然，你也可以修改一下，加入到系统定时任务，实现自动化 : )</p>
+<h2 id="代码主体"><a href="#代码主体" class="headerlink" title="代码主体"></a>代码主体</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"># Author HJK &lt;https://github.com/0xHJK&gt;</div><div class="line"></div><div class="line">USERNAME=&apos;&apos;</div><div class="line">PASSWORD=&apos;&apos;</div><div class="line">USERSFILE=&apos;users.txt&apos;</div><div class="line">STATEFILE=&apos;state.txt&apos;</div><div class="line">DOMAIN=&apos;&apos;</div><div class="line">COMMOND=&apos;do_login&apos;</div><div class="line">VERBOSE=&apos;y&apos;</div><div class="line"></div><div class="line">usage()&#123;</div><div class="line">    echo &quot;Usage: bash `basename $0` [-q] [-u username] [-p password] [-f file] [Commond]&quot;</div><div class="line">    echo &quot;Commonds: login, logout&quot;</div><div class="line">    exit 1</div><div class="line">&#125;</div><div class="line">md5_hash()&#123;</div><div class="line">    if [[ `uname | grep &apos;Darwin&apos;` ]]; then</div><div class="line">        echo -n $&#123;1&#125; | md5 -q | cut -c9-24</div><div class="line">    else</div><div class="line">        echo -n $&#123;1&#125; | md5sum | cut -c9-24</div><div class="line">    fi</div><div class="line">&#125;</div><div class="line"></div><div class="line">say_out()&#123;</div><div class="line">    if [[ $&#123;VERBOSE&#125; == &apos;y&apos; ]]; then echo $*; fi</div><div class="line">&#125;</div><div class="line"></div><div class="line">submit()&#123;</div><div class="line">    msg=`curl -s &quot;http://$&#123;DOMAIN&#125;/cgi-bin/$&#123;1&#125;&quot; -H &apos;Pragma: no-cache&apos; -H &quot;Origin: http://$&#123;DOMAIN&#125;&quot; -H &apos;Accept-Encoding: gzip, deflate&apos; -H &apos;Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4&apos; -H &apos;User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0)&apos; -H &apos;Content-Type: application/x-www-form-urlencoded&apos; -H &apos;Accept: */*&apos; -H &apos;Cache-Control: no-cache&apos; -H &quot;Referer: http://$&#123;DOMAIN&#125;/&quot; -H &apos;Connection: keep-alive&apos; -H &apos;DNT: 1&apos; --data &quot;username=$&#123;2&#125;&amp;password=$&#123;3&#125;&amp;drop=0&amp;type=1&amp;n=1&quot; --compressed`</div><div class="line">    if [[ `echo $&#123;msg&#125; | grep &apos;ip_exist_error&apos;` ]]; then</div><div class="line">        echo &quot;IP尚未下线  $&#123;msg&#125;&quot;</div><div class="line">    elif [[ `echo $&#123;msg&#125; | grep &apos;online_num_error&apos;` ]]; then</div><div class="line">        echo &quot;账号 $&#123;USERNAME&#125; 登录人数超过限额 $&#123;msg&#125;&quot;</div><div class="line">    elif [[ `echo $&#123;msg&#125; | grep &apos;username_error&apos;` ]]; then</div><div class="line">        echo &quot;用户名 $&#123;USERNAME&#125; 错误  $&#123;msg&#125;&quot;</div><div class="line">    elif [[ `echo $&#123;msg&#125; | grep &apos;password_error&apos;` ]]; then</div><div class="line">        echo &quot;密码 $&#123;PASSWORD&#125; 错误  $&#123;msg&#125;&quot;</div><div class="line">    elif [[ `echo $&#123;msg&#125; | grep &apos;logout_ok&apos;` ]]; then</div><div class="line">        echo &quot;账号 $&#123;USERNAME&#125; 注销成功  $&#123;msg&#125;&quot;</div><div class="line">    elif [[ `echo $&#123;msg&#125; | grep &apos;[0-9]\&#123;10,\&#125;&apos;` ]]; then</div><div class="line">        echo &quot;账号 $&#123;USERNAME&#125; 登录成功  $&#123;msg&#125;&quot;</div><div class="line">    else</div><div class="line">        echo &quot;未知消息 $&#123;msg&#125;&quot;</div><div class="line">    fi</div><div class="line">&#125;</div><div class="line"></div><div class="line"># 当有参数时获取参数</div><div class="line">if [ $# -gt 0 ]; then</div><div class="line">    while getopts :qu:p:f: OPTION</div><div class="line">    do</div><div class="line">        case $OPTION in</div><div class="line">            q) VERBOSE=&apos;n&apos; ;;</div><div class="line">            u) USERNAME=$OPTARG ;;</div><div class="line">            p) PASSWORD=$OPTARG ;;</div><div class="line">            f) USERSFILE=$OPTARG ;;</div><div class="line">            \?) usage ;;</div><div class="line">        esac</div><div class="line">    done</div><div class="line">fi</div><div class="line"></div><div class="line">shift $(($OPTIND - 1))</div><div class="line"></div><div class="line"># 如果登录</div><div class="line">if [ $# -eq 0 ] || [[ $1 == &apos;login&apos; ]]; then</div><div class="line">    # 如果账号密码为空，则从文件里读取</div><div class="line">    if [[ $&#123;USERNAME&#125; == &apos;&apos; ]] || [[ $&#123;PASSWORD&#125; == &apos;&apos; ]]; then</div><div class="line">        cat -s $&#123;USERSFILE&#125; | while read l1; do</div><div class="line">            USERNAME=`echo -n $l1 | awk &apos;&#123; print $1 &#125;&apos;`</div><div class="line">            PASSWORD=`echo -n $l1 | awk &apos;&#123; print $2 &#125;&apos;`</div><div class="line">            say_out &quot;正在尝试登录 $&#123;USERNAME&#125; $&#123;PASSWORD&#125;&quot;</div><div class="line">            PASSWORD=`md5_hash $&#123;PASSWORD&#125;`</div><div class="line">            # 如果登录成功，则退出循环，并记录账号密码</div><div class="line">            state=`submit &apos;do_login&apos; $&#123;USERNAME&#125; $&#123;PASSWORD&#125;`</div><div class="line">            say_out &quot;$&#123;state&#125;&quot;</div><div class="line">            if [[ `echo &quot;$&#123;state&#125;&quot; | grep &apos;成功&apos;` ]]; then</div><div class="line">                echo &quot;$&#123;state&#125;&quot;</div><div class="line">                echo &quot;$&#123;USERNAME&#125; $&#123;PASSWORD&#125;&quot; &gt; $&#123;STATEFILE&#125;</div><div class="line">                exit</div><div class="line">            fi</div><div class="line">        done</div><div class="line">        echo &quot;所有账号登录失败&quot;</div><div class="line">    else</div><div class="line">        say_out &quot;正在尝试登录 $&#123;USERNAME&#125; $&#123;PASSWORD&#125;&quot;</div><div class="line">        PASSWORD=`md5_hash $&#123;PASSWORD&#125;`</div><div class="line">        submit &apos;do_login&apos; $&#123;USERNAME&#125; $&#123;PASSWORD&#125;</div><div class="line">    fi</div><div class="line"># 如果注销</div><div class="line">elif [[ $1 == &apos;logout&apos; ]]; then</div><div class="line">    # 如果账号密码为空，则从文件里读取</div><div class="line">    if [[ $&#123;USERNAME&#125; == &apos;&apos; ]] || [[ $&#123;PASSWORD&#125; == &apos;&apos; ]]; then</div><div class="line">        USERNAME=`cat $&#123;STATEFILE&#125; | awk &apos;&#123; print $1 &#125;&apos;`</div><div class="line">        PASSWORD=`cat $&#123;STATEFILE&#125; | awk &apos;&#123; print $2 &#125;&apos;`</div><div class="line">        say_out &quot;正在尝试注销 $&#123;USERNAME&#125; $&#123;PASSWORD&#125;&quot;</div><div class="line">    fi</div><div class="line">    submit &apos;force_logout&apos; $&#123;USERNAME&#125; $&#123;PASSWORD&#125;</div><div class="line">else</div><div class="line">    usage</div><div class="line">fi</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -366,13 +387,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Ubuntu/" rel="tag">#Ubuntu</a>
+            <a href="/tags/srun/" rel="tag">#srun</a>
           
-            <a href="/tags/Python3/" rel="tag">#Python3</a>
+            <a href="/tags/bash/" rel="tag">#bash</a>
           
-            <a href="/tags/PyQuery/" rel="tag">#PyQuery</a>
+            <a href="/tags/curl/" rel="tag">#curl</a>
           
-            <a href="/tags/lxml/" rel="tag">#lxml</a>
+            <a href="/tags/awk/" rel="tag">#awk</a>
+          
+            <a href="/tags/md5/" rel="tag">#md5</a>
           
         </div>
       
@@ -381,17 +404,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/p/hello.html" rel="next" title="Hello">
-                <i class="fa fa-chevron-left"></i> Hello
+              <a href="/p/simple-http-ftp-server.html" rel="next" title="一句话开启一个http/ftp服务器">
+                <i class="fa fa-chevron-left"></i> 一句话开启一个http/ftp服务器
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/p/qcloud-openvpn.html" rel="prev" title="Ubuntu一键安装openvpn和免流的一点人生经验">
-                Ubuntu一键安装openvpn和免流的一点人生经验 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -417,8 +436,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="p/pyquery-install.html"
-           data-title="Ubuntu下PyQuery安装失败、lxml安装失败" data-url="http://hjk.im/p/pyquery-install.html">
+      <div class="ds-thread" data-thread-key="p/srun3000-auth-linux-or-macos.html"
+           data-title="srun系统上网认证（适用Linux和macOS）" data-url="http://hjk.im/p/srun3000-auth-linux-or-macos.html">
       </div>
     
   </div>
@@ -578,7 +597,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参数说明"><span class="nav-number">1.</span> <span class="nav-text">参数说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方式"><span class="nav-number">2.</span> <span class="nav-text">使用方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码主体"><span class="nav-number">3.</span> <span class="nav-text">代码主体</span></a></li></ol></div>
             
           </div>
         </section>

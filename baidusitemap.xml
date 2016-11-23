@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>http://hjk.im/p/srun3000-auth-linux-or-macos.html</loc>
+    <lastmod>2016-11-23T13:05:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>srun系统上网认证（适用Linux和macOS）</title>
+        <pubTime>2016-11-23T12:50:36.000Z</pubTime>
+        
+        <tag>srun</tag>
+         
+        <tag>bash</tag>
+         
+        <tag>curl</tag>
+         
+        <tag>awk</tag>
+         
+        <tag>md5</tag>
+         
+         
+           
+             
+              <breadCrumb title="shell" url="http://hjk.im/categories/shell/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/simple-http-ftp-server.html</loc>
     <lastmod>2016-11-23T04:16:10.000Z</lastmod>
     <data>
@@ -245,9 +273,9 @@
         <title>Docker for Mac找不到docker0</title>
         <pubTime>2016-08-10T11:56:59.000Z</pubTime>
         
-        <tag>mac</tag>
-         
         <tag>docker</tag>
+         
+        <tag>mac</tag>
          
         <tag>docker0</tag>
          

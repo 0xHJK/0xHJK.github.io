@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://hjk.im/p/hexo-blog-qiniu-cdn.html</loc>
+    <lastmod>2016-12-07T06:59:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>将Hexo静态博客部署到七牛</title>
+        <pubTime>2016-12-07T05:24:47.000Z</pubTime>
+        
+        <tag>CDN</tag>
+         
+        <tag>Hexo</tag>
+         
+        <tag>dns</tag>
+         
+        <tag>HJK.im</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/srun3000-auth-linux-or-macos.html</loc>
     <lastmod>2016-11-23T13:05:32.000Z</lastmod>
     <data>
@@ -273,9 +299,9 @@
         <title>Docker for Mac找不到docker0</title>
         <pubTime>2016-08-10T11:56:59.000Z</pubTime>
         
-        <tag>docker</tag>
-         
         <tag>mac</tag>
+         
+        <tag>docker</tag>
          
         <tag>docker0</tag>
          

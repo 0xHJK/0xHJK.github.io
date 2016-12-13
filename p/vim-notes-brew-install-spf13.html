@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Ubuntu,mac,virtualbox,NAT," />
+  <meta name="keywords" content="macOS,Vim,brew,spf13," />
 
 
 
@@ -82,31 +82,22 @@
 
 
 
-<meta name="description" content="第一步要确认一下Ubuntu里面有没有安装ssh-server，可以用sshd测试。如果没有安装的话，可以使用sudo apt-get install openssh-server安装。
-然后是设置端口转发(Port Forwarding)：
-
-然后就可以在mac下连接了：
-ssh username@127.0.0.1 -p 2222">
+<meta name="description" content="macOS系统默认自带的vim版本是7.3的，想要完全使用spf13-vim的配置，需要更新至7.4以上版本。最简单的办法是保留系统原有vim，用brew安装新版。
+1brew install vim
+如果没安装brew，安装一下：1/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在macOS下使用NAT连接virtualbox中的Ubuntu">
-<meta property="og:url" content="http://hjk.im/p/mac-virtualbox-ssh-nat.html">
+<meta property="og:title" content="Vim学习笔记-安装和终极配置">
+<meta property="og:url" content="http://hjk.im/p/vim-notes-brew-install-spf13.html">
 <meta property="og:site_name" content="HJK's">
-<meta property="og:description" content="第一步要确认一下Ubuntu里面有没有安装ssh-server，可以用sshd测试。如果没有安装的话，可以使用sudo apt-get install openssh-server安装。
-然后是设置端口转发(Port Forwarding)：
-
-然后就可以在mac下连接了：
-ssh username@127.0.0.1 -p 2222">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/0060lm7Tgw1f997wvjv4nj310e0qm79f.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tgw1f997wuwbnqj30zk0icq4z.jpg">
-<meta property="og:updated_time" content="2016-10-29T08:31:32.000Z">
+<meta property="og:description" content="macOS系统默认自带的vim版本是7.3的，想要完全使用spf13-vim的配置，需要更新至7.4以上版本。最简单的办法是保留系统原有vim，用brew安装新版。
+1brew install vim
+如果没安装brew，安装一下：1/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst">
+<meta property="og:updated_time" content="2016-12-13T04:45:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在macOS下使用NAT连接virtualbox中的Ubuntu">
-<meta name="twitter:description" content="第一步要确认一下Ubuntu里面有没有安装ssh-server，可以用sshd测试。如果没有安装的话，可以使用sudo apt-get install openssh-server安装。
-然后是设置端口转发(Port Forwarding)：
-
-然后就可以在mac下连接了：
-ssh username@127.0.0.1 -p 2222">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/0060lm7Tgw1f997wvjv4nj310e0qm79f.jpg">
+<meta name="twitter:title" content="Vim学习笔记-安装和终极配置">
+<meta name="twitter:description" content="macOS系统默认自带的vim版本是7.3的，想要完全使用spf13-vim的配置，需要更新至7.4以上版本。最简单的办法是保留系统原有vim，用brew安装新版。
+1brew install vim
+如果没安装brew，安装一下：1/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst">
 
 
 
@@ -127,9 +118,9 @@ ssh username@127.0.0.1 -p 2222">
 
 
 
-  <link rel="canonical" href="http://hjk.im/p/mac-virtualbox-ssh-nat.html"/>
+  <link rel="canonical" href="http://hjk.im/p/vim-notes-brew-install-spf13.html"/>
 
-  <title> 在macOS下使用NAT连接virtualbox中的Ubuntu | HJK's </title>
+  <title> Vim学习笔记-安装和终极配置 | HJK's </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +250,7 @@ ssh username@127.0.0.1 -p 2222">
             
             
               
-                在macOS下使用NAT连接virtualbox中的Ubuntu
+                Vim学习笔记-安装和终极配置
               
             
           </h1>
@@ -271,8 +262,8 @@ ssh username@127.0.0.1 -p 2222">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-29T16:14:50+08:00" content="2016-10-29">
-              2016-10-29
+            <time itemprop="dateCreated" datetime="2016-12-13T11:52:47+08:00" content="2016-12-13">
+              2016-12-13
             </time>
           </span>
 
@@ -285,8 +276,8 @@ ssh username@127.0.0.1 -p 2222">
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/日常/" itemprop="url" rel="index">
-                    <span itemprop="name">日常</span>
+                  <a href="/categories/系列/" itemprop="url" rel="index">
+                    <span itemprop="name">系列</span>
                   </a>
                 </span>
 
@@ -301,8 +292,8 @@ ssh username@127.0.0.1 -p 2222">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/p/mac-virtualbox-ssh-nat.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="p/mac-virtualbox-ssh-nat.html" itemprop="commentsCount"></span>
+                <a href="/p/vim-notes-brew-install-spf13.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="p/vim-notes-brew-install-spf13.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -312,7 +303,7 @@ ssh username@127.0.0.1 -p 2222">
 
           
           
-             <span id="/p/mac-virtualbox-ssh-nat.html" class="leancloud_visitors" data-flag-title="在macOS下使用NAT连接virtualbox中的Ubuntu">
+             <span id="/p/vim-notes-brew-install-spf13.html" class="leancloud_visitors" data-flag-title="Vim学习笔记-安装和终极配置">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -339,11 +330,13 @@ ssh username@127.0.0.1 -p 2222">
       
 
       
-        <p>第一步要确认一下Ubuntu里面有没有安装ssh-server，可以用<code>sshd</code>测试。<br>如果没有安装的话，可以使用<code>sudo apt-get install openssh-server</code>安装。</p>
-<p>然后是设置端口转发(Port Forwarding)：</p>
-<p><img src="http://ww1.sinaimg.cn/large/0060lm7Tgw1f997wvjv4nj310e0qm79f.jpg" alt=""><br><img src="http://ww2.sinaimg.cn/large/0060lm7Tgw1f997wuwbnqj30zk0icq4z.jpg" alt=""></p>
-<p>然后就可以在mac下连接了：</p>
-<p>ssh username@127.0.0.1 -p 2222</p>
+        <p>macOS系统默认自带的vim版本是7.3的，想要完全使用spf13-vim的配置，需要更新至7.4以上版本。最简单的办法是保留系统原有vim，用brew安装新版。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install vim</div></pre></td></tr></table></figure>
+<p>如果没安装brew，安装一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure></p>
+<p>如果安装vim碰到错误“The requested URL returned error: 404 Not Found”，说明需要更新brew<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update</div></pre></td></tr></table></figure></p>
+<p>如果更新brew碰到错误，尝试修复，然后再尝试更新和下载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd $(brew --prefix) &amp;&amp; git fetch &amp;&amp; git reset --hard origin/master</div></pre></td></tr></table></figure></p>
+<p>然后安装spf13-vim终极配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://j.mp/spf13-vim3 -L &gt; spf13-vim.sh &amp;&amp; sh spf13-vim.sh</div></pre></td></tr></table></figure></p>
+<p>OVER~</p>
 
       
     </div>
@@ -366,13 +359,13 @@ ssh username@127.0.0.1 -p 2222">
       
         <div class="post-tags">
           
-            <a href="/tags/Ubuntu/" rel="tag">#Ubuntu</a>
+            <a href="/tags/macOS/" rel="tag">#macOS</a>
           
-            <a href="/tags/mac/" rel="tag">#mac</a>
+            <a href="/tags/Vim/" rel="tag">#Vim</a>
           
-            <a href="/tags/virtualbox/" rel="tag">#virtualbox</a>
+            <a href="/tags/brew/" rel="tag">#brew</a>
           
-            <a href="/tags/NAT/" rel="tag">#NAT</a>
+            <a href="/tags/spf13/" rel="tag">#spf13</a>
           
         </div>
       
@@ -381,17 +374,13 @@ ssh username@127.0.0.1 -p 2222">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/p/360cdn-closed.html" rel="next" title="360前端公共库已经停止运行">
-                <i class="fa fa-chevron-left"></i> 360前端公共库已经停止运行
+              <a href="/p/hexo-blog-qiniu-cdn.html" rel="next" title="将Hexo静态博客部署到七牛">
+                <i class="fa fa-chevron-left"></i> 将Hexo静态博客部署到七牛
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/p/get-free-domain.html" rel="prev" title="注册ml/ga/cf/tk免费域名并设置dns解析">
-                注册ml/ga/cf/tk免费域名并设置dns解析 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -417,8 +406,8 @@ ssh username@127.0.0.1 -p 2222">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="p/mac-virtualbox-ssh-nat.html"
-           data-title="在macOS下使用NAT连接virtualbox中的Ubuntu" data-url="http://hjk.im/p/mac-virtualbox-ssh-nat.html">
+      <div class="ds-thread" data-thread-key="p/vim-notes-brew-install-spf13.html"
+           data-title="Vim学习笔记-安装和终极配置" data-url="http://hjk.im/p/vim-notes-brew-install-spf13.html">
       </div>
     
   </div>

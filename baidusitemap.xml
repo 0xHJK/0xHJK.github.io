@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://hjk.im/p/vim-notes-brew-install-spf13.html</loc>
+    <lastmod>2016-12-13T04:45:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vim学习笔记-安装和终极配置</title>
+        <pubTime>2016-12-13T03:52:47.000Z</pubTime>
+        
+        <tag>macOS</tag>
+         
+        <tag>Vim</tag>
+         
+        <tag>brew</tag>
+         
+        <tag>spf13</tag>
+         
+         
+           
+             
+              <breadCrumb title="系列" url="http://hjk.im/categories/%E7%B3%BB%E5%88%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/hexo-blog-qiniu-cdn.html</loc>
     <lastmod>2016-12-07T07:30:57.000Z</lastmod>
     <data>
@@ -13,9 +39,9 @@
         
         <tag>CDN</tag>
          
-        <tag>Hexo</tag>
-         
         <tag>dns</tag>
+         
+        <tag>Hexo</tag>
          
         <tag>HJK.im</tag>
          
@@ -197,11 +223,11 @@
         <title>在macOS下使用NAT连接virtualbox中的Ubuntu</title>
         <pubTime>2016-10-29T08:14:50.000Z</pubTime>
         
+        <tag>Ubuntu</tag>
+         
         <tag>mac</tag>
          
         <tag>virtualbox</tag>
-         
-        <tag>Ubuntu</tag>
          
         <tag>NAT</tag>
          
@@ -349,13 +375,13 @@
         <title>Ubuntu下PyQuery安装失败、lxml安装失败</title>
         <pubTime>2016-08-05T02:12:56.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Python3</tag>
          
         <tag>PyQuery</tag>
          
         <tag>lxml</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -377,11 +403,11 @@
         
         <tag>Hexo</tag>
          
+        <tag>HJK.im</tag>
+         
         <tag>NexT</tag>
          
         <tag>GitHub</tag>
-         
-        <tag>HJK.im</tag>
          
         <tag>Coding</tag>
          

@@ -39,11 +39,11 @@
         
         <tag>CDN</tag>
          
-        <tag>dns</tag>
+        <tag>HJK.im</tag>
          
         <tag>Hexo</tag>
          
-        <tag>HJK.im</tag>
+        <tag>dns</tag>
          
          
            
@@ -193,11 +193,11 @@
         <title>注册ml/ga/cf/tk免费域名并设置dns解析</title>
         <pubTime>2016-11-08T08:06:35.000Z</pubTime>
         
+        <tag>dns</tag>
+         
         <tag>free</tag>
          
         <tag>domain</tag>
-         
-        <tag>dns</tag>
          
         <tag>freenom</tag>
          
@@ -223,11 +223,11 @@
         <title>在macOS下使用NAT连接virtualbox中的Ubuntu</title>
         <pubTime>2016-10-29T08:14:50.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>mac</tag>
          
         <tag>virtualbox</tag>
+         
+        <tag>Ubuntu</tag>
          
         <tag>NAT</tag>
          
@@ -375,13 +375,13 @@
         <title>Ubuntu下PyQuery安装失败、lxml安装失败</title>
         <pubTime>2016-08-05T02:12:56.000Z</pubTime>
         
+        <tag>Ubuntu</tag>
+         
         <tag>Python3</tag>
          
         <tag>PyQuery</tag>
          
         <tag>lxml</tag>
-         
-        <tag>Ubuntu</tag>
          
          
            
@@ -401,9 +401,9 @@
         <title>Hello</title>
         <pubTime>2016-07-30T13:22:22.000Z</pubTime>
         
-        <tag>Hexo</tag>
-         
         <tag>HJK.im</tag>
+         
+        <tag>Hexo</tag>
          
         <tag>NexT</tag>
          

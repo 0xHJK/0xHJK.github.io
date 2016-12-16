@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HJK, Blog, Python, 前端, 安全, 互联网" />
+  <meta name="keywords" content="Hexo,CDN,DNS,HJK.im," />
 
 
 
@@ -82,15 +82,25 @@
 
 
 
-<meta name="description" content="我真是一个幸运的家伙。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HJK's">
-<meta property="og:url" content="http://hjk.im/tags/驱动/index.html">
+<meta name="description" content="起因由于CDN的特点，缓存时间较长，如果博客发布后再修改的话，需要手动抓取链接。一篇博客发布，会影响首页、分类、标签等，所以这个过程较为麻烦。所以我想写一个脚本，在每次发布后自动抓取所有链接，更新CDN缓存。
+首先注册、创建空间、配置域名解析，可以看这里:
+http://hjk.im/p/hexo-blog-qiniu-cdn.html
+工具用到的工具是七牛的qshell，官网的版本比较旧，可以看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将Hexo静态博客部署到七牛优化版">
+<meta property="og:url" content="http://hjk.im/p/hexo-blog-qiniu-cdn-plus.html">
 <meta property="og:site_name" content="HJK's">
-<meta property="og:description" content="我真是一个幸运的家伙。">
+<meta property="og:description" content="起因由于CDN的特点，缓存时间较长，如果博客发布后再修改的话，需要手动抓取链接。一篇博客发布，会影响首页、分类、标签等，所以这个过程较为麻烦。所以我想写一个脚本，在每次发布后自动抓取所有链接，更新CDN缓存。
+首先注册、创建空间、配置域名解析，可以看这里:
+http://hjk.im/p/hexo-blog-qiniu-cdn.html
+工具用到的工具是七牛的qshell，官网的版本比较旧，可以看">
+<meta property="og:updated_time" content="2016-12-16T07:27:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HJK's">
-<meta name="twitter:description" content="我真是一个幸运的家伙。">
+<meta name="twitter:title" content="将Hexo静态博客部署到七牛优化版">
+<meta name="twitter:description" content="起因由于CDN的特点，缓存时间较长，如果博客发布后再修改的话，需要手动抓取链接。一篇博客发布，会影响首页、分类、标签等，所以这个过程较为麻烦。所以我想写一个脚本，在每次发布后自动抓取所有链接，更新CDN缓存。
+首先注册、创建空间、配置域名解析，可以看这里:
+http://hjk.im/p/hexo-blog-qiniu-cdn.html
+工具用到的工具是七牛的qshell，官网的版本比较旧，可以看">
 
 
 
@@ -111,9 +121,9 @@
 
 
 
-  <link rel="canonical" href="http://hjk.im/tags/驱动/"/>
+  <link rel="canonical" href="http://hjk.im/p/hexo-blog-qiniu-cdn-plus.html"/>
 
-  <title> 标签: 驱动 | HJK's </title>
+  <title> 将Hexo静态博客部署到七牛优化版 | HJK's </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -134,7 +144,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -222,46 +232,189 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        驱动
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                将Hexo静态博客部署到七牛优化版
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-16T14:35:01+08:00" content="2016-12-16">
+              2016-12-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/日常/" itemprop="url" rel="index">
+                    <span itemprop="name">日常</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/p/hexo-blog-qiniu-cdn-plus.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="p/hexo-blog-qiniu-cdn-plus.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/p/hexo-blog-qiniu-cdn-plus.html" class="leancloud_visitors" data-flag-title="将Hexo静态博客部署到七牛优化版">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>由于CDN的特点，缓存时间较长，如果博客发布后再修改的话，需要手动抓取链接。一篇博客发布，会影响首页、分类、标签等，所以这个过程较为麻烦。所以我想写一个脚本，在每次发布后自动抓取所有链接，更新CDN缓存。</p>
+<p>首先注册、创建空间、配置域名解析，可以看这里:</p>
+<p><a href="http://hjk.im/p/hexo-blog-qiniu-cdn.html">http://hjk.im/p/hexo-blog-qiniu-cdn.html</a></p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p>用到的工具是七牛的qshell，官网的版本比较旧，可以看<a href="https://github.com/qiniu/qshell" target="_blank" rel="external">七牛官方的Github</a></p>
+<p>Linux版本和macOS版本使用类似，下载下来添加一个软连接到<code>/usr/local/bin</code>。这样是为了可以直接使用<code>qshell</code>命令，写法可以参考如下(如果提示权限问题的话，加sudo执行)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -s &lt;YOUR_PATH&gt;/qshell_xxx /usr/local/bin/qshell</div></pre></td></tr></table></figure>
+<p>然后执行一下<code>qshell</code>命令看看是否成功。</p>
+<h2 id="设置账户"><a href="#设置账户" class="headerlink" title="设置账户"></a>设置账户</h2><p>我们知道调用七牛的API需要一对<code>AccessKey</code>和<code>SecretKey</code>，这个可以从七牛的后台的账号设置-&gt;<a href="https://portal.qiniu.com/user/key" target="_blank" rel="external">密钥</a>获取。</p>
+<p>首先要使用七牛的API，必须先设置<code>AccessKey</code>和<code>SecretKey</code>。命令写法参考如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">qshell account ELUs327kxVPJrGCXqWae9yioc0xYZyrIpbM6Wh6o LVzZY2SqOQ_I_kM1n00ygACVBArDvOWtiLkDtKi_</div></pre></td></tr></table></figure></p>
+<p>上面的<code>ELUs327kxVPJrGCXqWae9yioc0xYZyrIpbM6Wh6o</code>就是你的<code>AccessKey</code>，而<code>LVzZY2SqOQ_I_kM1n00ygACVBArDvOWtiLkDtKi_</code>就是你的<code>SecretKey</code>。如果你想查看当前的<code>AccessKey</code>和<code>SecretKey</code>设置，使用命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">qshell account</div></pre></td></tr></table></figure>
+<p>上面的命令会输出当前你设置好的<code>AccessKey</code>和<code>SecretKey</code>。<br>接下来，我们就可以放心地使用七牛的API功能了。</p>
+<h2 id="写配置文件"><a href="#写配置文件" class="headerlink" title="写配置文件"></a>写配置文件</h2><p>假设文件名为qiniu.json，保存到Hexo博客根目录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   &quot;src_dir&quot;            :   &quot;&lt;LocalPath&gt;&quot;,</div><div class="line">   &quot;access_key&quot;         :   &quot;&lt;Your AccessKey&gt;&quot;,</div><div class="line">   &quot;secret_key&quot;         :   &quot;&lt;Your SecretKey&gt;&quot;,</div><div class="line">   &quot;bucket&quot;             :   &quot;&lt;Bucket&gt;&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>路径写绝对路径，更多配置参考七牛文档：<a href="https://github.com/qiniu/qshell/wiki/qupload" target="_blank" rel="external">qupload</a></p>
+<h2 id="处理脚本"><a href="#处理脚本" class="headerlink" title="处理脚本"></a>处理脚本</h2><p>假设文件名为hexo.sh，保存到Hexo博客根目录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># 生成HTML</div><div class="line">hexo g</div><div class="line"># 部署（可选）</div><div class="line">hexo d</div><div class="line"># 根据配置上传文件</div><div class="line">qshell qupload qiniu.json</div><div class="line"># 修改为你的域名</div><div class="line">echo &quot;http://hjk.im&quot; &gt; pageurl.txt</div><div class="line">ls public/*/*.html | sed &apos;s;public;http://hjk.im;&apos; &gt;&gt; pageurl.txt</div><div class="line">ls public/*/*/*.html | sed &apos;s;public;http://hjk.im;&apos; &gt;&gt; pageurl.txt</div><div class="line"># 根据生成的URL列表刷新</div><div class="line">qshell cdnrefresh pageurl.txt</div></pre></td></tr></table></figure>
+<p>以后每次更新博客只需要运行hexo.sh即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bash hexo.sh</div></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/qiniu/qshell" target="_blank" rel="external">https://github.com/qiniu/qshell</a></p>
+<p><a href="https://github.com/qiniu/qshell/wiki/qupload" target="_blank" rel="external">https://github.com/qiniu/qshell/wiki/qupload</a></p>
+<p><a href="https://github.com/qiniu/qshell/wiki/cdnrefresh" target="_blank" rel="external">https://github.com/qiniu/qshell/wiki/cdnrefresh</a></p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/p/qf9700-for-mac.html" itemprop="url">
-              
-                <span itemprop="name">USB有线网卡ky-qf9700的Mac版(10.11)驱动</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-23T19:15:05+08:00"
-              content="2016-08-23" >
-          08-23
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+          
+            <a href="/tags/CDN/" rel="tag">#CDN</a>
+          
+            <a href="/tags/DNS/" rel="tag">#DNS</a>
+          
+            <a href="/tags/HJK-im/" rel="tag">#HJK.im</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/p/vim-notes-brew-install-spf13.html" rel="next" title="Vim学习笔记-安装和终极配置">
+                <i class="fa fa-chevron-left"></i> Vim学习笔记-安装和终极配置
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -269,6 +422,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="p/hexo-blog-qiniu-cdn-plus.html"
+           data-title="将Hexo静态博客部署到七牛优化版" data-url="http://hjk.im/p/hexo-blog-qiniu-cdn-plus.html">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -288,8 +449,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -409,6 +579,17 @@
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工具"><span class="nav-number">2.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置账户"><span class="nav-number">3.</span> <span class="nav-text">设置账户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写配置文件"><span class="nav-number">4.</span> <span class="nav-text">写配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理脚本"><span class="nav-number">5.</span> <span class="nav-text">处理脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -527,6 +708,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

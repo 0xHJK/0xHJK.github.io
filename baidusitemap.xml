@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://hjk.im/p/hexo-blog-qiniu-cdn-plus.html</loc>
+    <lastmod>2016-12-16T07:27:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>将Hexo静态博客部署到七牛优化版</title>
+        <pubTime>2016-12-16T06:35:01.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>CDN</tag>
+         
+        <tag>DNS</tag>
+         
+        <tag>HJK.im</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/vim-notes-brew-install-spf13.html</loc>
     <lastmod>2016-12-13T04:45:20.000Z</lastmod>
     <data>
@@ -37,11 +63,11 @@
         <title>将Hexo静态博客部署到七牛</title>
         <pubTime>2016-12-07T05:24:47.000Z</pubTime>
         
+        <tag>Hexo</tag>
+         
         <tag>CDN</tag>
          
         <tag>HJK.im</tag>
-         
-        <tag>Hexo</tag>
          
         <tag>dns</tag>
          
@@ -193,11 +219,11 @@
         <title>注册ml/ga/cf/tk免费域名并设置dns解析</title>
         <pubTime>2016-11-08T08:06:35.000Z</pubTime>
         
-        <tag>dns</tag>
-         
         <tag>free</tag>
          
         <tag>domain</tag>
+         
+        <tag>dns</tag>
          
         <tag>freenom</tag>
          
@@ -325,9 +351,9 @@
         <title>Docker for Mac找不到docker0</title>
         <pubTime>2016-08-10T11:56:59.000Z</pubTime>
         
-        <tag>mac</tag>
-         
         <tag>docker</tag>
+         
+        <tag>mac</tag>
          
         <tag>docker0</tag>
          
@@ -401,13 +427,13 @@
         <title>Hello</title>
         <pubTime>2016-07-30T13:22:22.000Z</pubTime>
         
-        <tag>HJK.im</tag>
-         
         <tag>Hexo</tag>
          
         <tag>NexT</tag>
          
         <tag>GitHub</tag>
+         
+        <tag>HJK.im</tag>
          
         <tag>Coding</tag>
          

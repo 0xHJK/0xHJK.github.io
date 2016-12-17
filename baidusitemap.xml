@@ -4,20 +4,76 @@
 
     
   <url>
-    <loc>http://hjk.im/p/passgen.html</loc>
-    <lastmod>2016-12-16T10:50:10.000Z</lastmod>
+    <loc>http://hjk.im/p/116012.html</loc>
+    <lastmod>2016-12-17T07:57:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>将Hexo静态博客部署到七牛优化版</title>
+        <pubTime>2016-12-16T06:35:01.000Z</pubTime>
+        
+        <tag>HJK.im</tag>
+         
+        <tag>Hexo</tag>
+         
+        <tag>DNS</tag>
+         
+        <tag>CDN</tag>
+         
+        <tag>七牛</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hjk.im/p/316021.html</loc>
+    <lastmod>2016-12-17T07:41:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vim学习笔记-安装和终极配置</title>
+        <pubTime>2016-12-13T03:52:47.000Z</pubTime>
+        
+        <tag>macOS</tag>
+         
+        <tag>vim</tag>
+         
+        <tag>brew</tag>
+         
+        <tag>spf13</tag>
+         
+         
+           
+             
+              <breadCrumb title="系列" url="http://hjk.im/categories/%E7%B3%BB%E5%88%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hjk.im/p/216002.html</loc>
+    <lastmod>2016-12-17T07:40:53.000Z</lastmod>
     <data>
         <display>
         <title>PassGen</title>
         <pubTime>2016-12-16T08:04:10.000Z</pubTime>
         
-        <tag>PassGen</tag>
+        <tag>GitHub</tag>
          
         <tag>Python</tag>
          
+        <tag>Docker</tag>
+         
         <tag>SQLite</tag>
          
-        <tag>Docker</tag>
+        <tag>PassGen</tag>
          
         <tag>Flask</tag>
          
@@ -36,72 +92,52 @@
 
     
   <url>
-    <loc>http://hjk.im/p/hexo-blog-qiniu-cdn-plus.html</loc>
-    <lastmod>2016-12-16T07:27:20.000Z</lastmod>
+    <loc>http://hjk.im/p/216001.html</loc>
+    <lastmod>2016-12-17T07:40:45.000Z</lastmod>
     <data>
         <display>
-        <title>将Hexo静态博客部署到七牛优化版</title>
-        <pubTime>2016-12-16T06:35:01.000Z</pubTime>
+        <title>Srun3000系统上网认证（适用Linux和macOS）</title>
+        <pubTime>2016-11-23T12:50:36.000Z</pubTime>
         
-        <tag>CDN</tag>
+        <tag>GitHub</tag>
          
+        <tag>Shell</tag>
+         
+        <tag>Srun3000</tag>
+         
+        <tag>MD5</tag>
+         
+        <tag>curl</tag>
+         
+        <tag>awk</tag>
+         
+         
+           
+             
+              <breadCrumb title="项目" url="http://hjk.im/categories/%E9%A1%B9%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hjk.im/p/116011.html</loc>
+    <lastmod>2016-12-17T07:38:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>将Hexo静态博客部署到七牛</title>
+        <pubTime>2016-12-07T05:24:47.000Z</pubTime>
+        
         <tag>HJK.im</tag>
          
         <tag>Hexo</tag>
          
         <tag>DNS</tag>
          
-         
-           
-             
-              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hjk.im/p/vim-notes-brew-install-spf13.html</loc>
-    <lastmod>2016-12-13T04:45:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vim学习笔记-安装和终极配置</title>
-        <pubTime>2016-12-13T03:52:47.000Z</pubTime>
-        
-        <tag>macOS</tag>
-         
-        <tag>Vim</tag>
-         
-        <tag>brew</tag>
-         
-        <tag>spf13</tag>
-         
-         
-           
-             
-              <breadCrumb title="系列" url="http://hjk.im/categories/%E7%B3%BB%E5%88%97/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hjk.im/p/hexo-blog-qiniu-cdn.html</loc>
-    <lastmod>2016-12-07T07:30:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>将Hexo静态博客部署到七牛</title>
-        <pubTime>2016-12-07T05:24:47.000Z</pubTime>
-        
         <tag>CDN</tag>
          
-        <tag>dns</tag>
-         
-        <tag>HJK.im</tag>
-         
-        <tag>Hexo</tag>
+        <tag>七牛</tag>
          
          
            
@@ -114,36 +150,8 @@
 
     
   <url>
-    <loc>http://hjk.im/p/srun3000-auth-linux-or-macos.html</loc>
-    <lastmod>2016-11-23T13:05:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>srun系统上网认证（适用Linux和macOS）</title>
-        <pubTime>2016-11-23T12:50:36.000Z</pubTime>
-        
-        <tag>srun</tag>
-         
-        <tag>bash</tag>
-         
-        <tag>curl</tag>
-         
-        <tag>awk</tag>
-         
-        <tag>md5</tag>
-         
-         
-           
-             
-              <breadCrumb title="shell" url="http://hjk.im/categories/shell/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hjk.im/p/simple-http-ftp-server.html</loc>
-    <lastmod>2016-11-23T04:16:10.000Z</lastmod>
+    <loc>http://hjk.im/p/116010.html</loc>
+    <lastmod>2016-12-17T07:37:36.000Z</lastmod>
     <data>
         <display>
         <title>一句话开启一个http/ftp服务器</title>
@@ -151,17 +159,17 @@
         
         <tag>Python</tag>
          
-        <tag>http</tag>
+        <tag>HTTP</tag>
          
-        <tag>ftp</tag>
-         
-        <tag>server</tag>
+        <tag>FTP</tag>
          
         <tag>PHP</tag>
          
         <tag>Ruby</tag>
          
         <tag>Node.js</tag>
+         
+        <tag>server</tag>
          
          
            
@@ -174,38 +182,14 @@
 
     
   <url>
-    <loc>http://hjk.im/p/batch-rename-filenames-with-shell.html</loc>
-    <lastmod>2016-11-22T10:35:19.000Z</lastmod>
+    <loc>http://hjk.im/p/116009.html</loc>
+    <lastmod>2016-12-17T07:37:05.000Z</lastmod>
     <data>
         <display>
-        <title>Shell一句话批量转换文件名大小写</title>
-        <pubTime>2016-11-22T10:17:38.000Z</pubTime>
-        
-        <tag>shell</tag>
-         
-        <tag>linux</tag>
-         
-        <tag>macOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="shell" url="http://hjk.im/categories/shell/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hjk.im/p/delete-duplicate-rows-sqlite.html</loc>
-    <lastmod>2016-11-16T13:31:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>删除sqlite中的重复数据</title>
+        <title>删除SQLite中的重复数据</title>
         <pubTime>2016-11-16T13:19:44.000Z</pubTime>
         
-        <tag>sqlite</tag>
+        <tag>SQLite</tag>
          
         <tag>SQL</tag>
          
@@ -220,48 +204,24 @@
 
     
   <url>
-    <loc>http://hjk.im/p/fix-hexo-theme-next-blank.html</loc>
-    <lastmod>2016-11-10T14:49:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>修复使用NexT主题的Hexo博客显示空白问题</title>
-        <pubTime>2016-11-10T14:36:54.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>NexT</tag>
-         
-        <tag>GitHub</tag>
-         
-         
-           
-             
-              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hjk.im/p/get-free-domain.html</loc>
-    <lastmod>2016-11-08T12:18:43.000Z</lastmod>
+    <loc>http://hjk.im/p/116007.html</loc>
+    <lastmod>2016-12-17T07:36:19.000Z</lastmod>
     <data>
         <display>
         <title>注册ml/ga/cf/tk免费域名并设置dns解析</title>
         <pubTime>2016-11-08T08:06:35.000Z</pubTime>
         
+        <tag>Freenom</tag>
+         
+        <tag>DNS</tag>
+         
+        <tag>DNSPod</tag>
+         
+        <tag>CloudXNS</tag>
+         
         <tag>free</tag>
          
         <tag>domain</tag>
-         
-        <tag>dns</tag>
-         
-        <tag>freenom</tag>
-         
-        <tag>dnspod</tag>
-         
-        <tag>cloudxns</tag>
          
          
            
@@ -274,18 +234,18 @@
 
     
   <url>
-    <loc>http://hjk.im/p/mac-virtualbox-ssh-nat.html</loc>
-    <lastmod>2016-10-29T08:31:32.000Z</lastmod>
+    <loc>http://hjk.im/p/116006.html</loc>
+    <lastmod>2016-12-17T07:35:32.000Z</lastmod>
     <data>
         <display>
         <title>在macOS下使用NAT连接virtualbox中的Ubuntu</title>
         <pubTime>2016-10-29T08:14:50.000Z</pubTime>
         
-        <tag>mac</tag>
-         
         <tag>Ubuntu</tag>
          
-        <tag>virtualbox</tag>
+        <tag>macOS</tag>
+         
+        <tag>VirtualBox</tag>
          
         <tag>NAT</tag>
          
@@ -300,92 +260,16 @@
 
     
   <url>
-    <loc>http://hjk.im/p/360cdn-closed.html</loc>
-    <lastmod>2016-09-08T15:21:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>360前端公共库已经停止运行</title>
-        <pubTime>2016-09-08T15:09:06.000Z</pubTime>
-        
-        <tag>360</tag>
-         
-        <tag>CDN</tag>
-         
-        <tag>fonts</tag>
-         
-         
-           
-             
-              <breadCrumb title="资讯" url="http://hjk.im/categories/%E8%B5%84%E8%AE%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hjk.im/p/console-api-reference.html</loc>
-    <lastmod>2016-08-26T11:35:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>console命令用法参考</title>
-        <pubTime>2016-08-24T07:02:34.000Z</pubTime>
-        
-        <tag>console</tag>
-         
-        <tag>debug</tag>
-         
-        <tag>Chrome</tag>
-         
-        <tag>浏览器</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="http://hjk.im/categories/%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hjk.im/p/qf9700-for-mac.html</loc>
-    <lastmod>2016-08-23T11:36:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>USB有线网卡ky-qf9700的Mac版(10.11)驱动</title>
-        <pubTime>2016-08-23T11:15:05.000Z</pubTime>
-        
-        <tag>mac</tag>
-         
-        <tag>驱动</tag>
-         
-        <tag>网卡</tag>
-         
-        <tag>ky-qf9700</tag>
-         
-         
-           
-             
-              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://hjk.im/p/mac-docker0.html</loc>
-    <lastmod>2016-08-10T13:44:51.000Z</lastmod>
+    <loc>http://hjk.im/p/116004.html</loc>
+    <lastmod>2016-12-17T07:35:09.000Z</lastmod>
     <data>
         <display>
         <title>Docker for Mac找不到docker0</title>
         <pubTime>2016-08-10T11:56:59.000Z</pubTime>
         
-        <tag>docker</tag>
+        <tag>Docker</tag>
          
-        <tag>mac</tag>
+        <tag>macOS</tag>
          
         <tag>docker0</tag>
          
@@ -400,18 +284,72 @@
 
     
   <url>
-    <loc>http://hjk.im/p/qcloud-openvpn.html</loc>
-    <lastmod>2016-08-06T14:52:55.000Z</lastmod>
+    <loc>http://hjk.im/p/716001.html</loc>
+    <lastmod>2016-12-17T07:26:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>360前端公共库已经停止运行</title>
+        <pubTime>2016-09-08T15:09:06.000Z</pubTime>
+        
+        <tag>CDN</tag>
+         
+        <tag>360</tag>
+         
+        <tag>fonts</tag>
+         
+         
+           
+             
+              <breadCrumb title="消息" url="http://hjk.im/categories/%E6%B6%88%E6%81%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hjk.im/p/616001.html</loc>
+    <lastmod>2016-12-17T07:23:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>USB有线网卡ky-qf9700的Mac版(10.11)驱动</title>
+        <pubTime>2016-08-23T11:15:05.000Z</pubTime>
+        
+        <tag>macOS</tag>
+         
+        <tag>USB</tag>
+         
+        <tag>ky-qf9700</tag>
+         
+        <tag>driver</tag>
+         
+        <tag>network</tag>
+         
+         
+           
+             
+              <breadCrumb title="资源" url="http://hjk.im/categories/%E8%B5%84%E6%BA%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hjk.im/p/116003.html</loc>
+    <lastmod>2016-12-17T07:19:06.000Z</lastmod>
     <data>
         <display>
         <title>Ubuntu一键安装openvpn和免流的一点人生经验</title>
         <pubTime>2016-08-06T12:13:30.000Z</pubTime>
         
+        <tag>OpenVPN</tag>
+         
+        <tag>TinyProxy</tag>
+         
+        <tag>VPS</tag>
+         
         <tag>腾讯云</tag>
-         
-        <tag>openvpn</tag>
-         
-        <tag>tinyproxy</tag>
          
         <tag>免流</tag>
          
@@ -426,14 +364,14 @@
 
     
   <url>
-    <loc>http://hjk.im/p/pyquery-install.html</loc>
-    <lastmod>2016-08-05T02:46:10.000Z</lastmod>
+    <loc>http://hjk.im/p/116002.html</loc>
+    <lastmod>2016-12-17T07:16:39.000Z</lastmod>
     <data>
         <display>
         <title>Ubuntu下PyQuery安装失败、lxml安装失败</title>
         <pubTime>2016-08-05T02:12:56.000Z</pubTime>
         
-        <tag>Python3</tag>
+        <tag>Python</tag>
          
         <tag>PyQuery</tag>
          
@@ -452,8 +390,8 @@
 
     
   <url>
-    <loc>http://hjk.im/p/hello.html</loc>
-    <lastmod>2016-07-30T16:49:21.000Z</lastmod>
+    <loc>http://hjk.im/p/116001.html</loc>
+    <lastmod>2016-12-17T07:15:06.000Z</lastmod>
     <data>
         <display>
         <title>Hello</title>
@@ -468,6 +406,82 @@
         <tag>GitHub</tag>
          
         <tag>Coding</tag>
+         
+        <tag>ssh</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hjk.im/p/116005.html</loc>
+    <lastmod>2016-12-17T07:13:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>Console命令用法参考</title>
+        <pubTime>2016-08-24T07:02:34.000Z</pubTime>
+        
+        <tag>Chrome</tag>
+         
+        <tag>console</tag>
+         
+        <tag>debug</tag>
+         
+        <tag>browser</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hjk.im/p/316011.html</loc>
+    <lastmod>2016-12-17T06:49:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>Shell一句话批量转换文件名大小写</title>
+        <pubTime>2016-11-22T10:17:38.000Z</pubTime>
+        
+        <tag>macOS</tag>
+         
+        <tag>Shell</tag>
+         
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://hjk.im/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hjk.im/p/116008.html</loc>
+    <lastmod>2016-11-10T14:49:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>修复使用NexT主题的Hexo博客显示空白问题</title>
+        <pubTime>2016-11-10T14:36:54.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>NexT</tag>
+         
+        <tag>GitHub</tag>
          
          
            

@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://hjk.im/p/417001.html</loc>
+    <lastmod>2017-06-05T12:26:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于朋友、消费、房子和读书</title>
+        <pubTime>2017-05-30T11:15:06.000Z</pubTime>
+        
+        <tag>朋友</tag>
+         
+        <tag>消费</tag>
+         
+        <tag>房子</tag>
+         
+        <tag>读书</tag>
+         
+         
+           
+             
+              <breadCrumb title="思考" url="http://hjk.im/categories/%E6%80%9D%E8%80%83/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/316022.html</loc>
     <lastmod>2016-12-22T06:06:51.000Z</lastmod>
     <data>
@@ -137,15 +163,15 @@
         <title>PassGen</title>
         <pubTime>2016-12-16T08:04:10.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>GitHub</tag>
+         
+        <tag>Python</tag>
          
         <tag>Docker</tag>
          
-        <tag>SQLite</tag>
-         
         <tag>PassGen</tag>
+         
+        <tag>SQLite</tag>
          
         <tag>Flask</tag>
          

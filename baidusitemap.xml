@@ -4,6 +4,106 @@
 
     
   <url>
+    <loc>http://hjk.im/p/117001.html</loc>
+    <lastmod>2017-07-23T14:10:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>在macOS中替换Windows换行符CRLF</title>
+        <pubTime>2017-07-22T15:18:30.000Z</pubTime>
+        
+        <tag>macOS</tag>
+         
+        <tag>Windows</tag>
+         
+        <tag>CRLF</tag>
+         
+        <tag>Shell</tag>
+         
+        <tag>sed</tag>
+         
+        <tag>tr</tag>
+         
+        <tag>gsed</tag>
+         
+        <tag>dos2unix</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hjk.im/p/117002.html</loc>
+    <lastmod>2017-07-23T14:08:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>PostgreSQL批量插入优化和错误处理</title>
+        <pubTime>2017-07-23T07:18:30.000Z</pubTime>
+        
+        <tag>sed</tag>
+         
+        <tag>awk</tag>
+         
+        <tag>PostgreSQL</tag>
+         
+        <tag>shell</tag>
+         
+         
+           
+             
+              <breadCrumb title="日常" url="http://hjk.im/categories/%E6%97%A5%E5%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hjk.im/p/317032.html</loc>
+    <lastmod>2017-07-23T08:48:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java核心技术笔记-对象与类</title>
+        <pubTime>2017-07-08T08:43:54.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://hjk.im/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://hjk.im/p/317031.html</loc>
+    <lastmod>2017-06-29T12:50:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java核心技术笔记-基本程序设计结构</title>
+        <pubTime>2017-06-29T12:48:48.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://hjk.im/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://hjk.im/p/116013.html</loc>
     <lastmod>2017-06-29T12:37:34.000Z</lastmod>
     <data>
@@ -165,9 +265,9 @@
         
         <tag>Python</tag>
          
-        <tag>Docker</tag>
-         
         <tag>GitHub</tag>
+         
+        <tag>Docker</tag>
          
         <tag>SQLite</tag>
          

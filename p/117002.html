@@ -1,0 +1,870 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="sed,awk,PostgreSQL,shell," />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="背景最开始的原因呢，是想重写一下定向密码生成器，毕竟那个密码生成策略真是拍脑袋决定的，代码结构现在看来也写得很烂。目前网上能见到的分析大部分都比较浅显，无非是一些常用密码TOP，于是想到了对现有公开数据库的密码分析。目前具体的分析还在进行当中，后续会写博客说明。这里先讲讲如何从文本快速导入大量数据到数据库。
+文本文件的结构大概如下：123zdg # 12344321 # zdg@csdn.netL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PostgreSQL批量插入优化和错误处理">
+<meta property="og:url" content="http://hjk.im/p/117002.html">
+<meta property="og:site_name" content="HJK's">
+<meta property="og:description" content="背景最开始的原因呢，是想重写一下定向密码生成器，毕竟那个密码生成策略真是拍脑袋决定的，代码结构现在看来也写得很烂。目前网上能见到的分析大部分都比较浅显，无非是一些常用密码TOP，于是想到了对现有公开数据库的密码分析。目前具体的分析还在进行当中，后续会写博客说明。这里先讲讲如何从文本快速导入大量数据到数据库。
+文本文件的结构大概如下：123zdg # 12344321 # zdg@csdn.netL">
+<meta property="og:updated_time" content="2017-07-23T14:08:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PostgreSQL批量插入优化和错误处理">
+<meta name="twitter:description" content="背景最开始的原因呢，是想重写一下定向密码生成器，毕竟那个密码生成策略真是拍脑袋决定的，代码结构现在看来也写得很烂。目前网上能见到的分析大部分都比较浅显，无非是一些常用密码TOP，于是想到了对现有公开数据库的密码分析。目前具体的分析还在进行当中，后续会写博客说明。这里先讲讲如何从文本快速导入大量数据到数据库。
+文本文件的结构大概如下：123zdg # 12344321 # zdg@csdn.netL">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://hjk.im/p/117002.html"/>
+
+  <title> PostgreSQL批量插入优化和错误处理 | HJK's </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">HJK's</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                PostgreSQL批量插入优化和错误处理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-07-23T15:18:30+08:00" content="2017-07-23">
+              2017-07-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/日常/" itemprop="url" rel="index">
+                    <span itemprop="name">日常</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/p/117002.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="p/117002.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/p/117002.html" class="leancloud_visitors" data-flag-title="PostgreSQL批量插入优化和错误处理">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最开始的原因呢，是想重写一下定向密码生成器，毕竟那个密码生成策略真是拍脑袋决定的，代码结构现在看来也写得很烂。目前网上能见到的分析大部分都比较浅显，无非是一些常用密码TOP，于是想到了对现有公开数据库的密码分析。目前具体的分析还在进行当中，后续会写博客说明。这里先讲讲如何从文本快速导入大量数据到数据库。</p>
+<p>文本文件的结构大概如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">zdg # 12344321 # zdg@csdn.net</div><div class="line">LaoZheng # 670203313747 # chengming_zheng@163.com</div><div class="line">fstao # 730413 # fstao@tom.com</div></pre></td></tr></table></figure></p>
+<h2 id="操作思路"><a href="#操作思路" class="headerlink" title="操作思路"></a>操作思路</h2><p>最开始我的思路是把文本文件用sed和awk处理拼接成SQL文件，然后导入到PostgreSQL中。也就是这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">insert into tbname (a, b, c) values</div><div class="line">(&quot;zdg&quot;, &quot;12344321&quot;, &quot;zdg@csdn.net&quot;),</div><div class="line">(&quot;huwolf&quot;, &quot;2535263&quot;, &quot;hujiye@263.net&quot;),</div><div class="line">(&quot;cadcjl&quot;, &quot;KIC43dk6!&quot;, &quot;ccedcjl@21cn.com&quot;);</div></pre></td></tr></table></figure></p>
+<p>于是我刷刷刷写了一条命令（为了阅读方便加了换行）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">iconv -f LATIN1 -t UTF-8 file.txt | </div><div class="line">gsed &apos;s/\r//g&apos; | </div><div class="line">awk &apos;&#123;print &quot;(\&quot;&quot; $1 &quot;\&quot;, \&quot;&quot; $3 &quot;\&quot;, \&quot;&quot; $5 &quot;\&quot;),&quot; &#125;&apos; | </div><div class="line">gsed &apos;$ s/.$/\;/; 1 iinsert into tbname (a, b, c) values&apos; &gt; exec.sql</div></pre></td></tr></table></figure></p>
+<p>先是转码，再是替换CRLF，然后字符串分割重组，接着把结尾的逗号变成分号，之后在第一行插入insert命令，最后输出文件。利用shell的管道，一气呵成，是不是美滋滋？</p>
+<h2 id="PostgreSQL中字符串的引号"><a href="#PostgreSQL中字符串的引号" class="headerlink" title="PostgreSQL中字符串的引号"></a>PostgreSQL中字符串的引号</h2><p>结果把SQL一执行，第二行就报错了，一行都没插进去。</p>
+<p>然后查了一下原因，原来标准的SQL中字符串用的是单引号，如果字符串本身也包括单引号，则使用两个单引号，也就是’’，不是”，也不是\’。（MySQL是支持双引号的，各家数据库有各自的方言）</p>
+<p>那好吧，那就改成单引号吧，于是我改了一下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">iconv -f LATIN1 -t UTF-8 file.txt | </div><div class="line">gsed &quot;s/\r//g;s/&apos;/&apos;&apos;/g&quot; | </div><div class="line">awk &apos;&#123;print &quot;(\&apos;&quot; $1 &quot;\&apos;, \&apos;&quot; $3 &quot;\&apos;, \&apos;&quot; $5 &quot;\&apos;),&quot; &#125;&apos; | </div><div class="line">gsed &apos;$ s/.$/\;/; 1 iinsert into tbname (a, b, c) values&apos; &gt; exec.sql</div></pre></td></tr></table></figure></p>
+<p>一气呵成，还不是美滋滋。</p>
+<h2 id="awk中的引号处理"><a href="#awk中的引号处理" class="headerlink" title="awk中的引号处理"></a>awk中的引号处理</h2><p>结果这次还没生成完文件就报错了 - -。</p>
+<p>原来当shell碰到第一个单引号时，它忽略掉其后直到下一个单引号的所有特殊字符。也就是说，原句中的<code>awk &#39;{print &quot;(\&#39;&quot; $1 &quot;\&#39;, \&#39;&quot; $3 &quot;\&#39;, \&#39;&quot; $5 &quot;\&#39;),&quot; }&#39;</code>实际上忽略了<code>&#39;</code>前的<code>\</code>。要让这句话执行，需要改成这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">awk &apos;&#123;print &quot;(&apos;\&apos;&apos;&quot; $1 &quot;&apos;\&apos;&apos;, &apos;\&apos;&apos;&quot; $3 &quot;&apos;\&apos;&apos;, &apos;\&apos;&apos;&quot; $5 &quot;&apos;\&apos;&apos;),&quot; &#125;&apos;</div></pre></td></tr></table></figure></p>
+<p>是不是引号看花眼（笑</p>
+<p>实际上上面这句话可以这样理解：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">awk &apos;&#123;print &quot;(&apos;</div><div class="line">\&apos;</div><div class="line">&apos;&quot; $1 &quot;&apos;</div><div class="line">\&apos;</div><div class="line">&apos;, &apos;</div><div class="line">\&apos;</div><div class="line">&apos;&quot; $3 &quot;&apos;</div><div class="line">\&apos;</div><div class="line">&apos;, &apos;</div><div class="line">\&apos;</div><div class="line">&apos;&quot; $5 &quot;&apos;</div><div class="line">\&apos;</div><div class="line">&apos;),&quot; &#125;&apos;</div></pre></td></tr></table></figure></p>
+<p>一组单引号内的字符是交给awk程序处理的，而<code>\&#39;</code>是先由shell处理成<code>&#39;</code>的。因为把<code>\&#39;</code>用双引号包起来执行效果和原来一样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">awk &apos;&#123;print &quot;(&apos;</div><div class="line">&quot;\&apos;&quot;</div><div class="line">&apos;&quot; $1 &quot;&apos;</div><div class="line">&quot;\&apos;&quot;</div><div class="line">&apos;, &apos;</div><div class="line">&quot;\&apos;&quot;</div><div class="line">&apos;&quot; $3 &quot;&apos;</div><div class="line">&quot;\&apos;&quot;</div><div class="line">&apos;, &apos;</div><div class="line">&quot;\&apos;&quot;</div><div class="line">&apos;&quot; $5 &quot;&apos;</div><div class="line">&quot;\&apos;&quot;</div><div class="line">&apos;),&quot; &#125;&apos;</div></pre></td></tr></table></figure></p>
+<p>合并后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">awk &apos;&#123;print &quot;(&apos;&quot;\&apos;&quot;&apos;&quot; $1 &quot;&apos;&quot;\&apos;&quot;&apos;, &apos;&quot;\&apos;&quot;&apos;&quot; $3 &quot;&apos;&quot;\&apos;&quot;&apos;, &apos;&quot;\&apos;&quot;&apos;&quot; $5 &quot;&apos;&quot;\&apos;&quot;&apos;),&quot; &#125;&apos;</div></pre></td></tr></table></figure></p>
+<p>还有一种看的清楚一点的办法是用ASCII码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">awk &apos;&#123;print &quot;(\x27&quot; $1 &quot;\x27, \x27&quot; $3 &quot;\x27, \x27&quot; $5 &quot;\x27),&quot; &#125;&apos;</div></pre></td></tr></table></figure></p>
+<h2 id="PostgreSQL的copy命令"><a href="#PostgreSQL的copy命令" class="headerlink" title="PostgreSQL的copy命令"></a>PostgreSQL的copy命令</h2><p>费了一番功夫，终于把文本处理成SQL了，然后就美滋滋地把SQL扔到数据库里去执行了。结果没想到跑了半天没个结果，电脑却越来越烫，风扇呼呼呼，吓得我赶紧把进程杀了。直接批量insert消耗的资源太大，一条一条insert只会更慢，看来这条路是走不通了。</p>
+<p>PostgreSQL专门为批量插入数据提供了一个copy命令，一个简单的例子如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">copy tbname (a, b, c) from &apos;file.txt&apos; delimiter &apos;#&apos;;</div></pre></td></tr></table></figure></p>
+<p>意思是以<code>#</code>为分隔符分割file.txt的每一行，然后分别插入到tbname的abc字段中，看上去不错，是吧？</p>
+<p>但是这里有一个大坑，那就是delimiter只能使用一个单字节的字符。当使用多个字符或者占用多个字节的字符时就会报如下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ERROR:  COPY delimiter must be a single one-byte character</div></pre></td></tr></table></figure></p>
+<p>而密码中可能包括所有可见字符，所以它们都不能用来当分隔符。首先我想到的是用空格或者tab（\t）来分割，结果发现有些人密码末尾是<code>\\\</code>把空格和tab给转义了。这就意味着直接这样分割是不行的了，需要有个办法让字符串不能发生转义。</p>
+<p>查了文档和stackoverflow，发现可以用csv模式配合quote参数满足这个需求。quote参数只能用于csv模式，默认为双引号<code>&quot;</code>，改成单引号需要这样写<code>quote &#39;&#39;&#39;&#39;</code>。</p>
+<p>最终我把文本处理为如下格式（两个单引号表示一个真实的单引号）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&apos;z&apos;&apos;dg&apos;,&apos;12344321&apos;,&apos;zdg@csdn.net&apos;</div><div class="line">&apos;Lao&apos;&apos;&apos;&apos;Zheng&apos;,&apos;6702033,13747&apos;,&apos;chengming_zheng@163.com&apos;</div><div class="line">&apos;fstao&apos;,&apos;730413\\\&apos;,&apos;fstao@tom.com&apos;</div></pre></td></tr></table></figure></p>
+<p>插入数据的命令为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">copy tbname (a, b, c) from &apos;file.csv&apos; delimiter &apos;,&apos; csv quote &apos;&apos;&apos;&apos;;</div></pre></td></tr></table></figure></p>
+<p>五百万条左右数据最后执行了4分钟左右，速度还是可以的。</p>
+<p>插入后的结果为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">     a      |       b       |            c</div><div class="line">------------+---------------+-------------------------</div><div class="line"> z&apos;dg       | 12344321      | zdg@csdn.net</div><div class="line"> Lao&apos;&apos;Zheng | 6702033,13747 | chengming_zheng@163.com</div><div class="line"> fstao      | 730413\\\     | fstao@tom.com</div></pre></td></tr></table></figure></p>
+<p>在使用copy命令的时候，字符串是可以使用双引号标记的，但是也要和单引号一样，在字符串内的双引号<code>&quot;</code>需要处理成两个双引号<code>&quot;&quot;</code>。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://my.oschina.net/davisqi/blog/318360" target="_blank" rel="external">https://my.oschina.net/davisqi/blog/318360</a><br><a href="https://www.postgresql.org/docs/9.6/static/sql-copy.html" target="_blank" rel="external">https://www.postgresql.org/docs/9.6/static/sql-copy.html</a><br><a href="https://stackoverflow.com/questions/12856377/the-correct-copy-command-to-load-postgresql-data-from-csv-file-that-has-single-q" target="_blank" rel="external">https://stackoverflow.com/questions/12856377/the-correct-copy-command-to-load-postgresql-data-from-csv-file-that-has-single-q</a><br><a href="https://stackoverflow.com/questions/17808511/properly-escape-a-double-quote-in-csv" target="_blank" rel="external">https://stackoverflow.com/questions/17808511/properly-escape-a-double-quote-in-csv</a><br><a href="https://stackoverflow.com/questions/34189658/postgres-copy-multibyte-delimiter" target="_blank" rel="external">https://stackoverflow.com/questions/34189658/postgres-copy-multibyte-delimiter</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/sed/" rel="tag">#sed</a>
+          
+            <a href="/tags/awk/" rel="tag">#awk</a>
+          
+            <a href="/tags/PostgreSQL/" rel="tag">#PostgreSQL</a>
+          
+            <a href="/tags/shell/" rel="tag">#shell</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/p/117001.html" rel="next" title="在macOS中替换Windows换行符CRLF">
+                <i class="fa fa-chevron-left"></i> 在macOS中替换Windows换行符CRLF
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="p/117002.html"
+           data-title="PostgreSQL批量插入优化和错误处理" data-url="http://hjk.im/p/117002.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="HJK" />
+          <p class="site-author-name" itemprop="name">HJK</p>
+          <p class="site-description motion-element" itemprop="description">我真是一个幸运的家伙。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/0xHJK" target="_blank" title="GayHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GayHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/0xHJK" target="_blank" title="Zhihu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Zhihu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://msdn.itellyou.cn" target="_blank" title="MSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  MSDN
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://pan.baidu.com/share/home?uk=1077950831" target="_blank" title="Baidu">
+                  
+                    <i class="fa fa-fw fa-cloud"></i>
+                  
+                  Baidu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://m.do.co/c/4996d3de3a13" target="_blank" title="DigitalOcean">
+                  
+                    <i class="fa fa-fw fa-cloud"></i>
+                  
+                  DigitalOcean
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="//hellozjf.com/" title="ZJF" target="_blank">ZJF</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="//liker12134.github.io" title="Liker" target="_blank">Liker</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="//blog.csdn.net/u011239443" title="Souljoy" target="_blank">Souljoy</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作思路"><span class="nav-number">2.</span> <span class="nav-text">操作思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PostgreSQL中字符串的引号"><span class="nav-number">3.</span> <span class="nav-text">PostgreSQL中字符串的引号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#awk中的引号处理"><span class="nav-number">4.</span> <span class="nav-text">awk中的引号处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PostgreSQL的copy命令"><span class="nav-number">5.</span> <span class="nav-text">PostgreSQL的copy命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HJK</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"bie"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("WQ6DCY3vitRohjRARvikV0f4-gzGzoHsz", "d9tlXRY0bP08NXqvL6VB4sdW");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>

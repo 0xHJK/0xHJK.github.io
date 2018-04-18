@@ -41,13 +41,13 @@
         
         <tag>macOS</tag>
          
-        <tag>Windows</tag>
-         
-        <tag>CRLF</tag>
-         
         <tag>Shell</tag>
          
         <tag>sed</tag>
+         
+        <tag>Windows</tag>
+         
+        <tag>CRLF</tag>
          
         <tag>tr</tag>
          
@@ -73,13 +73,13 @@
         <title>PostgreSQL批量插入优化和错误处理</title>
         <pubTime>2017-07-23T07:18:30.000Z</pubTime>
         
-        <tag>sed</tag>
+        <tag>awk</tag>
          
         <tag>PostgreSQL</tag>
          
         <tag>shell</tag>
          
-        <tag>awk</tag>
+        <tag>sed</tag>
          
          
            
@@ -327,15 +327,15 @@
         
         <tag>GitHub</tag>
          
-        <tag>Shell</tag>
-         
-        <tag>awk</tag>
-         
         <tag>Srun3000</tag>
+         
+        <tag>Shell</tag>
          
         <tag>MD5</tag>
          
         <tag>curl</tag>
+         
+        <tag>awk</tag>
          
          
            

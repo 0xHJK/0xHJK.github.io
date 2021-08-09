@@ -381,14 +381,6 @@ td {
   width: 120px;
   height: 120px;
 }
-.site-header .social-container {
-  padding: 16px;
-  font-size: 18px;
-}
-.site-header .social-container a {
-  margin: 4px 8px;
-  color: #868e96;
-}
 @media (max-width: 600px) {
   .site-header {
     padding: 24px 0 0;
@@ -408,7 +400,7 @@ td {
   font-size: 28px;
   text-align: center;
   padding: 24px 0;
-  font-weight: 900;
+  font-weight: 400;
   letter-spacing: 0.02em;
 }
 .post-container .post .post-info {
@@ -522,7 +514,7 @@ td {
   font-size: 32px;
   text-align: center;
   padding: 24px 0;
-  font-weight: 900;
+  font-weight: 400;
   letter-spacing: 0.02em;
 }
 .post-detail .post .post-info {
@@ -642,7 +634,7 @@ td {
 .post-detail .post .post-content h5,
 .post-detail .post .post-content h6 {
   margin: 16px 0;
-  font-weight: 700;
+  font-weight: 400;
   padding-top: 16px;
 }
 .post-detail .post .post-content h1 {
@@ -662,7 +654,7 @@ td {
 }
 .post-detail .post .post-content h6 {
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 400;
 }
 .post-detail .post .post-content hr {
   display: block;
@@ -844,11 +836,11 @@ td {
 }
 .archives-container .post .post-title {
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 400;
   letter-spacing: 0.02em;
 }
 .archives-container .post .time {
-  font-size: 0.75rem;
+  font-size: 1rem;
   margin-top: 8px;
   color: #ced4da;
 }
@@ -884,18 +876,22 @@ td {
   padding: 24px 32px;
 }
 .site-footer {
-  font-size: 12px;
+  font-size: 14px;
+  font-family: 'Source Code Pro';
   text-align: center;
   padding: 40px 24px;
   color: #868e96;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-.rss {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 24px;
+.site-footer .social-container {
+  padding: 16px;
+  font-size: 18px;
+}
+.site-footer .social-container a {
+  margin: 4px 8px;
 }
 .hljs {
   display: block;
@@ -974,3 +970,29 @@ td {
 .hljs-strong {
   font-weight: bold;
 }
+
+      .post-detail .post .post-content p {
+        font-size: 15px;
+      }
+    
+      .post-container .post .post-title {
+        text-align: center;
+      }
+      .post-container .post .post-info {
+        text-align: center;
+      }
+      .post-detail .post .post-title {
+        text-align: center;
+      }
+      .post-detail .post .post-info {
+        text-align: center;
+      }
+    
+      body {
+        font-family: -apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif;
+      }
+    
+      a:hover {
+        color: #f783ac;
+      }
+    

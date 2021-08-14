@@ -315,7 +315,7 @@ a {
   transition: all 0.3s;
 }
 a:hover {
-  color: #006CFF;
+  color: #f783ac;
 }
 body,
 div,
@@ -445,12 +445,20 @@ td {
   font-weight: bolder;
 }
 .post-container .post .post-abstract a {
-  color: #006CFF;
   transition: all 0.3s;
 }
 .post-container .post .post-abstract a:hover {
-  color: #0061e6;
-  border-bottom: 1px dotted #0061e6;
+  color: #f783ac;
+  border-bottom: 1px dotted #f783ac;
+}
+.post-container .post .post-abstract p {
+  text-align: justify;
+  text-justify: inter-ideograph;
+  text-indent: 2em;
+}
+.post-container .post .post-abstract p:last-child::after {
+  content: " [...]";
+  color: #f783ac;
 }
 .post-container .post .post-abstract code {
   font-family: monospace;
@@ -549,8 +557,8 @@ td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.26);
 }
 .post-detail .post .post-content a:hover {
-  color: #0061e6;
-  border-bottom: 1px solid #0061e6;
+  color: #DB5A6B;
+  border-bottom: 1px solid #DB5A6B;
 }
 .post-detail .post .post-content img {
   display: block;
@@ -565,6 +573,9 @@ td {
   font-size: 16px;
   letter-spacing: 0.05em;
   hyphens: auto;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  text-indent: 2em;
 }
 .post-detail .post .post-content p code,
 .post-detail .post .post-content li code {
@@ -802,7 +813,7 @@ td {
   background: #fafafa;
 }
 .toc-container li a.current {
-  color: #006CFF;
+  color: #f783ac;
   background: #fafafa;
 }
 @media (max-width: 600px) {
@@ -877,7 +888,7 @@ td {
 }
 .site-footer {
   font-size: 14px;
-  font-family: 'Source Code Pro';
+  font-family: 'Source Code Pro', Hack, Monaco;
   text-align: center;
   padding: 40px 24px;
   color: #868e96;
